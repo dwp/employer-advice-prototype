@@ -1,0 +1,59 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Are you confident communicating with your employee while they are off sick?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "keep-in-touch-with-employee"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "confidentCommunicatingWithEmployeeA",
+        name: "confidentCommunicatingWithEmployeeA",
+        value: data['confidentCommunicatingWithEmployeeA'],
+        fieldset: {
+          legend: {
+            text: "Are you confident communicating with your employee while they are off sick?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['confidentCommunicatingWithEmployeeA'] === 'Yes'
+          },
+          {
+            value: "No~/sprint-3/prototype-A/results",
+            text: "No",
+            checked: data['confidentCommunicatingWithEmployeeA'] === 'No'
+          },
+          {
+            value: "Not sure",
+            text: "Not sure",
+            checked: data['confidentCommunicatingWithEmployeeA'] === 'Not sure'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

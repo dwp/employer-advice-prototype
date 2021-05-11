@@ -1,0 +1,38 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Employee absent due to sickness: what you need to do
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Employee absent due to sickness: what you need to do
+      </h1>
+
+      <p>
+        This is for employers and line managers. It will provide personalised guidance to help you:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>comply with the law</li>
+        <li>follow best practice</li>
+      </ul>
+
+      <p class="govuk-body">By using this guidance you will be able to support your employee to come back to work when they are able to.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "when-did-employee-leave",
+        isStartButton: true
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

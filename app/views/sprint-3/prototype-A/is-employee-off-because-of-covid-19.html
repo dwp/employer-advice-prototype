@@ -1,0 +1,59 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Is your employee off work because of coronavirus (COVID-19)?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "when-did-employee-leave"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "offBecauseCovidA",
+        name: "offBecauseCovidA",
+        value: data['offBecauseCovidA'],
+        fieldset: {
+          legend: {
+            text: "Is your employee off work because of coronavirus (COVID-19)?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['offBecauseCovidA'] === 'Yes'
+          },
+          {
+            value: "No~/sprint-3/prototype-A/might-need-to-pay-ssp",
+            text: "No",
+            checked: data['offBecauseCovidA'] === 'No'
+          },
+          {
+            value: "Not sure",
+            text: "Not sure",
+            checked: data['offBecauseCovidA'] === 'Not sure'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      <!-- </form> -->
+    </div>
+  </div>
+
+{% endblock %}

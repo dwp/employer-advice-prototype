@@ -1,0 +1,58 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Does your employee need changes to their workplace before they can return to work safely?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "confident-communicating-with-employee"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "doesEmployeeNeedChangesB",
+        name: "doesEmployeeNeedChangesB",
+        fieldset: {
+          legend: {
+            text: "Does your employee need changes to their workplace before they can return to work safely?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['doesEmployeeNeedChangesB'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['doesEmployeeNeedChangesB'] === 'No'
+          },
+          {
+            value: "I don’t know~/sprint-3/prototype-B/results",
+            text: "I don’t know",
+            checked: data['doesEmployeeNeedChangesB'] === 'I don’t know'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

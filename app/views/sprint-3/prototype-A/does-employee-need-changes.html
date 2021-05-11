@@ -1,0 +1,58 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Does your employee need changes to their workplace before they can return to work safely?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "results"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "doesEmployeeNeedChangesA",
+        name: "doesEmployeeNeedChangesA",
+        fieldset: {
+          legend: {
+            text: "Does your employee need changes to their workplace before they can return to work safely?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['doesEmployeeNeedChangesA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['doesEmployeeNeedChangesA'] === 'No'
+          },
+          {
+            value: "I don’t know~/sprint-3/prototype-A/you-must-talk-about-reasonable-adjustments",
+            text: "I don’t know",
+            checked: data['doesEmployeeNeedChangesA'] === 'I don’t know'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

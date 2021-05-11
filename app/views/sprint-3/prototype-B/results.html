@@ -1,0 +1,158 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Recommendations for you
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "does-employee-need-changes"
+    }) }}
+
+    <span class="govuk-caption-xl"></span>
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Employee absent due to sickness: what you need to do</span>
+      Recommendations for you
+    </h1>
+
+  </div>
+
+  
+    <!--
+      Replaying users answers
+    -->
+  <div class="govuk-grid-row"></div>
+    <div class="govuk-grid-column-one-third">
+
+      <p>
+        Because you said your employee:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has been off work sick for 6 weeks</li>
+        <li>is not off sick because of Coronavirus (COVID-19)</li>
+        <li>has not been contacted</li>
+      </ul>
+
+      <p>
+        Because you said:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you are not confident communicating with your employee while they are off sick</li>
+        <li>you have not talked about workplace changes with your employee</li>
+      </ul>
+
+    </div>
+
+    <!--
+      Guidance being given
+    -->
+
+    <div class="govuk-grid-column-two-thirds">
+    
+      <!--
+        Statutory sick pay
+      -->
+
+      <h2 class="govuk-heading-m">You might need to pay Statutory Sick Pay</h2>
+
+      <p class="govuk-body">Your employee has been off work for 42 calendar days.</p>
+
+      <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. SSP is £96.35 a week, and you pay it instead of a normal salary. You cannot claim SSP back from the government.</p>
+
+      <p class="govuk-body">Use our online form to <a href="https://www.gov.uk/calculate-statutory-sick-pay">calculate how much SSP you need to pay</a>.</p>
+
+      <p class="govuk-body">Before you pay SSP you can ask your employee for proof of their sickness. A fit note is an example of proof. Fit notes used to be called sick notes.</p>
+
+      <p class="govuk-body">Your employee can ask their doctor for a free fit note if they've been off sick for 8 or more days. <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">Find out what to do when you’re given a fit note</a>.</p>
+      
+      <p class="govuk-body">Paying SSP is a legal requirement if your employee is eligible. Some employers also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay.</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!--
+        You should contact employee
+      -->
+
+      <h2 class="govuk-heading-m">You should get in contact with your employee</h2>
+
+      <p class="govuk-body">Your employee has been off work for 6 weeks. It's best to get in touch in the first week they're off work, and then every two weeks until they are ready to return.</p>
+
+      <p class="govuk-body">Staying in regular contact with your employee is the best way to help them come back to work when they are ready.</p>
+
+      <p class="govuk-body">Keeping in contact is a good chance to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>check on the wellbeing of your employee</li>
+        <li>see if they need any support</li>
+        <li>talk about any relevant updates or changes happening at work</li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
+      <!--
+          What to say
+      -->
+      
+      <h1 class="govuk-heading-m">What to say</h1>
+
+      <p class="govuk-body">The purpose of getting in touch with an employee is to reassure them that they can return to work when they are better. Your employee shouldn’t feel pressured to return sooner than they want to.</p>
+
+      <p class="govuk-body">If you’re not sure what to say, follow these guidelines on <a href="https://www.healthline.com/health/what-to-say-to-someone-who-is-sick">what you should and shouldn’t say to a sick employee</a>.</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!--
+          How often to get in touch
+      -->
+
+      <h1 class="govuk-heading-m">How often to get in touch</h1>
+
+      <p class="govuk-body">There are no rules for how often to get in touch. You and your employee should discuss what is appropriate for you both.</p>
+
+      <p class="govuk-body">When your employee first goes off sick it’s a good idea to get in touch every week. Because your employee has been off for more than 3 months, you might not need to get in touch so frequently.</p>
+
+      <p class="govuk-body">However, you should still agree a schedule for when you will get in touch with your employee.</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!--
+          What methods of communication to use
+      -->
+
+      <h1 class="govuk-heading-m">You should discuss the method of communication</h1>
+
+      <p class="govuk-body">Use whatever method feels most comfortable and appropriate for both you and your employee. It could be a text message, social media message, email, letter, phonemail, or face to face meeting.</p>
+
+      <p class="govuk-body">Keep a record of when you’ve been in touch and a brief overview of what you discussed. This can be helpful in case there is a dispute in the future.</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!--
+        Reasonable adjustments
+      -->
+
+      <h1 class="govuk-heading-l">You must talk about reasonable adjustments with your employee</h1>
+
+      <p class="govuk-body">Employees who are disabled or who have health conditions should not be disadvantaged when doing their jobs.</p>
+
+      <p class="govuk-body">As the employer you are responsible for making sure your employee is not disadvantaged. You may need to make changes to the workplace or the way your employee can do their job.</p>
+
+      <p class="govuk-body">These changes are called ‘reasonable adjustments’ and they are required by law.</p>
+
+      <p class="govuk-body">You must talk to your employee about what changes they might need when they return to work.</p>
+
+      <p class="govuk-body">Read more about <a href="https://www.acas.org.uk/reasonable-adjustments">reasonable adjustments</a>.</p>
+
+      <br><br><br><br><br>
+      
+    </div>
+  </div>
+
+{% endblock %}
