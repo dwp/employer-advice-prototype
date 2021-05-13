@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Is your employee off work because of coronavirus (COVID-19)?
+  Is your employee off work sick because of coronavirus (COVID-19)?
 {% endblock %}
 
 {% block content %}
@@ -24,7 +24,7 @@
         value: data['offBecauseCovidA'],
         fieldset: {
           legend: {
-            text: "Is your employee off work because of coronavirus (COVID-19)?",
+            text: "Is your employee off work sick because of coronavirus (COVID-19)?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -41,9 +41,9 @@
             checked: data['offBecauseCovidA'] === 'No'
           },
           {
-            value: "Not sure",
-            text: "Not sure",
-            checked: data['offBecauseCovidA'] === 'Not sure'
+            value: "I'm not sure",
+            text: "I'm not sure",
+            checked: data['offBecauseCovidA'] === 'I’m not sure'
           }
         ]
       }) }}
