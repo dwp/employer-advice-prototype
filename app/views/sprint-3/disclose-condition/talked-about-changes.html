@@ -1,0 +1,57 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Have you talked to {{ data['employeeName'] }} to decide on the changes you will make?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "what-kind-of-illness-or-disability"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "talkedAboutChanges",
+        name: "talkedAboutChanges",
+        value: data['talkedAboutChanges'],
+        fieldset: {
+          legend: {
+            text: "Have you talked to " + data['employeeName'] + " to decide on the changes you will make?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Changes will be more effective if you have an open conversation as early as you can."
+        },
+        items: [
+          {
+            value: "Yes~/sprint-3/disclose-condition/can-you-make-changes",
+            text: "Yes",
+            checked: data['talkedAboutChanges'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['talkedAboutChanges'] === 'No'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

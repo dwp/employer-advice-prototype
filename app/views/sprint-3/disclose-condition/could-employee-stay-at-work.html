@@ -1,0 +1,59 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Could {{ data['employeeName'] }} stay at work with changes and support?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "talked-about-condition"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "couldEmployeeStayAtWork",
+        name: "couldEmployeeStayAtWork",
+        value: data['couldEmployeeStayAtWork'],
+        fieldset: {
+          legend: {
+            text: "Could " + data['employeeName'] + " stay at work with changes and support?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~/sprint-3/disclose-condition/talked-about-changes",
+            text: "Yes",
+            checked: data['couldEmployeeStayAtWork'] === 'Yes'
+          },
+          {
+            value: "I’m not sure~/sprint-3/disclose-condition/talked-about-changes",
+            text: "I’m not sure",
+            checked: data['couldEmployeeStayAtWork'] === 'I’m not sure'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['couldEmployeeStayAtWork'] === 'No'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
