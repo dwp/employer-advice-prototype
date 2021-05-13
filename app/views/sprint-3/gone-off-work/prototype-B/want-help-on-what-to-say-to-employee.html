@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Do you want help on what to say to your employee while they are off work sick?  
+  Do you want help on what to say to your employee while they are off work sick?
 {% endblock %}
 
 {% block content %}
@@ -13,15 +13,15 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "keep-in-touch-with-employee"
+        href: "have-you-contacted-employee"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "confidentCommunicatingWithEmployeeA",
-        name: "confidentCommunicatingWithEmployeeA",
-        value: data['confidentCommunicatingWithEmployeeA'],
+        idPrefix: "confidentCommunicatingWithEmployeeB",
+        name: "confidentCommunicatingWithEmployeeB",
+        value: data['confidentCommunicatingWithEmployeeB'],
         fieldset: {
           legend: {
             text: "Do you want help on what to say to your employee while they are off work sick?",
@@ -31,14 +31,14 @@
         },
         items: [
           {
-            value: "Yes~/sprint-3/gone-off-work/prototype-A/results",
+            value: "Yes~/sprint-3/gone-off-work/prototype-B/does-employee-need-changes",
             text: "Yes",
-            checked: data['confidentCommunicatingWithEmployeeA'] === 'Yes'
+            checked: data['confidentCommunicatingWithEmployeeB'] === 'Yes'
           },
           {
             value: "No",
             text: "No",
-            checked: data['confidentCommunicatingWithEmployeeA'] === 'No'
+            checked: data['confidentCommunicatingWithEmployeeB'] === 'No'
           }
         ]
       }) }}
