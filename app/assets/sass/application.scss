@@ -32,7 +32,6 @@ $govuk-assets-path: '/govuk/assets/';
     border: 1px solid rgb(0, 0, 0);
     padding: 20px;
     margin-bottom: 25px;
-   }
 
    .checklistCheckbox{
     background-color: #FFFFFF;
@@ -43,6 +42,17 @@ $govuk-assets-path: '/govuk/assets/';
    }
 
    .checklistCardSpacing {
-     margin-top: 60px;
-     margin-bottom: 60px;
-   }
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .govuk-grid-row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .govuk-grid-column-one-third {
+    padding: 0;
+  }
+  .govuk-grid-column-one-third p, .govuk-grid-column-one-third li {
+    font-size: 1rem;
+  }
+
