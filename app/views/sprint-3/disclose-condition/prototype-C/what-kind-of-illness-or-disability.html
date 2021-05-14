@@ -1,0 +1,62 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+What kind of illness or disability does your employee have?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "employee-name"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "typeOfIllness",
+        name: "typeOfIllness",
+        value: data['typeOfIllness'],
+        fieldset: {
+          legend: {
+            text: "What kind of illness or disability does " + data['employeeName'] + " have?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "You’ll see relevant advice based on their condition."
+        },
+        items: [
+          {
+            value: "Stress or other mental health condition",
+            text: "Stress or other mental health condition",
+            checked: data['typeOfIllness'] === 'Stress or other mental health condition'
+          },
+          {
+            value: "Physical injury, strain or disability~/sprint-3/disclose-condition/prototype-C/talked-about-condition",
+            text: "Physical injury, strain or disability",
+            checked: data['typeOfIllness'] === 'Physical injury, strain or disability'
+          },
+          {
+            value: "A disease, heart or breathing problem",
+            text: "A disease, heart or breathing problem",
+            checked: data['typeOfIllness'] === 'A disease, heart or breathing problem'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

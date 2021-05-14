@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName'] }} about how their condition might affect them?
+Have you talked to {{ data['employeeName'] }} to decide on the changes you will make?
 {% endblock %}
 
 {% block content %}
@@ -13,32 +13,35 @@ Have you talked to {{ data['employeeName'] }} about how their condition might af
 
       {{ govukBackLink({
         text: "Back",
-        href: "what-kind-of-illness-or-disability"
+        href: "could-employee-stay-at-work"
       }) }}
 
       <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
 
       {{ govukRadios({
-        idPrefix: "talkedToEmployee",
-        name: "talkedToEmployee",
-        value: data['talkedToEmployee'],
+        idPrefix: "talkedAboutChanges",
+        name: "talkedAboutChanges",
+        value: data['talkedAboutChanges'],
         fieldset: {
           legend: {
-            text: "Have you talked to " + data['employeeName'] + " about how their condition might affect them?",
+            text: "Have you talked to " + data['employeeName'] + " to decide on the changes you will make?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
+        hint: {
+          text: "Changes will be more effective if you have an open conversation as early as you can."
+        },
         items: [
           {
-            value: "Yes~/sprint-3/disclose-condition/could-employee-stay-at-work",
+            value: "Yes",
             text: "Yes",
-            checked: data['talkedToEmployee'] === 'Yes'
+            checked: data['talkedAboutChanges'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/disclose-condition/talking-about-condition",
+            value: "No~/sprint-3/disclose-condition/prototype-D/deciding-changes-at-work",
             text: "No",
-            checked: data['talkedToEmployee'] === 'No'
+            checked: data['talkedAboutChanges'] === 'No'
           }
         ]
       }) }}
