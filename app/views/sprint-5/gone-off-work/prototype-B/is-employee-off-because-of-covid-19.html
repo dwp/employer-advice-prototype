@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Do you want help on what to say to your employee while they are off work sick?
+  Is your employee off work because of coronavirus (COVID-19)?
 {% endblock %}
 
 {% block content %}
@@ -13,41 +13,46 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "have-you-contacted-employee"
+        href: "when-did-employee-go-off-work-sick"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "confidentCommunicatingWithEmployeeB",
-        name: "confidentCommunicatingWithEmployeeB",
-        value: data['confidentCommunicatingWithEmployeeB'],
+        idPrefix: "offBecauseCovidB",
+        name: "offBecauseCovidB",
+        value: data['offBecauseCovidB'],
         fieldset: {
           legend: {
-            text: "Do you want help on what to say to your employee while they are off work sick?",
+            text: "Is your employee off work because of coronavirus (COVID-19)?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
           {
-            value: "Yes~/sprint-3/gone-off-work/prototype-B/does-employee-need-changes",
+            value: "Yes",
             text: "Yes",
-            checked: data['confidentCommunicatingWithEmployeeB'] === 'Yes'
+            checked: data['offBecauseCovidB'] === 'Yes'
           },
           {
-            value: "No",
+            value: "No~/sprint-5/gone-off-work/prototype-B/have-you-contacted-employee",
             text: "No",
-            checked: data['confidentCommunicatingWithEmployeeB'] === 'No'
+            checked: data['offBecauseCovidB'] === 'No'
+          },
+          {
+            value: "I’m not sure",
+            text: "I’m not sure",
+            checked: data['offBecauseCovidB'] === 'I’m not sure'
           }
         ]
       }) }}
-
+      
       {{ govukButton({
         text: "Continue"
       }) }}
 
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 

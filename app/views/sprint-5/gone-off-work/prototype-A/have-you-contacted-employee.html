@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Do you want help on what to say to your employee while they are off work sick?  
+  Have you contacted your employee since they have been off work sick?
 {% endblock %}
 
 {% block content %}
@@ -13,32 +13,37 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "get-in-touch-with-employee"
+        href: "must-pay-ssp"
       }) }}
+
+      <!-- <br><br> -->
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "confidentCommunicatingWithEmployeeA",
-        name: "confidentCommunicatingWithEmployeeA",
-        value: data['confidentCommunicatingWithEmployeeA'],
+        idPrefix: "contactedEmployeeA",
+        name: "contactedEmployeeA",
+        value: data['offBecauseCovid'],
         fieldset: {
           legend: {
-            text: "Do you want help on what to say to your employee while they are off work sick?",
+            text: "Have you contacted your employee since they have been off work sick?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
+        hint: {
+          text: "For example, with a phone call, letter or text message"
+        },
         items: [
           {
-            value: "Yes~/sprint-3/gone-off-work/prototype-A/what-to-say-to-employee",
+            value: "Yes",
             text: "Yes",
-            checked: data['confidentCommunicatingWithEmployeeA'] === 'Yes'
+            checked: data['contactedEmployeeA'] === 'Yes'
           },
           {
-            value: "No",
+            value: "No~/sprint-5/gone-off-work/prototype-A/get-in-touch-with-employee",
             text: "No",
-            checked: data['confidentCommunicatingWithEmployeeA'] === 'No'
+            checked: data['contactedEmployeeA'] === 'No'
           }
         ]
       }) }}

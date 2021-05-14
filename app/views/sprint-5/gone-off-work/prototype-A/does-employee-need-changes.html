@@ -13,14 +13,14 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "want-help-on-what-to-say-to-employee"
+        href: "what-to-say-to-employee"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "doesEmployeeNeedChangesB",
-        name: "doesEmployeeNeedChangesB",
+        idPrefix: "doesEmployeeNeedChangesA",
+        name: "doesEmployeeNeedChangesA",
         fieldset: {
           legend: {
             text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
@@ -32,17 +32,17 @@
           {
             value: "Yes",
             text: "Yes",
-            checked: data['doesEmployeeNeedChangesB'] === 'Yes'
+            checked: data['doesEmployeeNeedChangesA'] === 'Yes'
           },
           {
             value: "No",
             text: "No",
-            checked: data['doesEmployeeNeedChangesB'] === 'No'
+            checked: data['doesEmployeeNeedChangesA'] === 'No'
           },
           {
-            value: "I’m not sure~/sprint-3/gone-off-work/prototype-B/recommendations-for-you",
+            value: "I’m not sure~/sprint-5/gone-off-work/prototype-A/must-talk-about-possible-changes",
             text: "I’m not sure",
-            checked: data['doesEmployeeNeedChangesB'] === 'I’m not sure'
+            checked: data['doesEmployeeNeedChangesA'] === 'I’m not sure'
           }
         ]
       }) }}

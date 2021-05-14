@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Have you contacted your employee since they have been off work sick?
+  Does your employee need changes to their workplace or their ways of working before they can return to work safely?
 {% endblock %}
 
 {% block content %}
@@ -13,37 +13,36 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "is-employee-off-because-of-covid-19"
+        href: "want-help-on-what-to-say-to-employee"
       }) }}
-
-      <!-- <br><br> -->
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "contactedEmployeeB",
-        name: "contactedEmployeeB",
-        value: data['offBecauseCovid'],
+        idPrefix: "doesEmployeeNeedChangesB",
+        name: "doesEmployeeNeedChangesB",
         fieldset: {
           legend: {
-            text: "Have you contacted your employee since they have been off work sick?",
+            text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
-        },
-        hint: {
-          text: "For example, with a phone call, letter or text message"
         },
         items: [
           {
             value: "Yes",
             text: "Yes",
-            checked: data['contactedEmployeeB'] === 'Yes'
+            checked: data['doesEmployeeNeedChangesB'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/gone-off-work/prototype-B/want-help-on-what-to-say-to-employee",
+            value: "No",
             text: "No",
-            checked: data['contactedEmployeeB'] === 'No'
+            checked: data['doesEmployeeNeedChangesB'] === 'No'
+          },
+          {
+            value: "I’m not sure~/sprint-5/gone-off-work/prototype-B/recommendations-for-you",
+            text: "I’m not sure",
+            checked: data['doesEmployeeNeedChangesB'] === 'I’m not sure'
           }
         ]
       }) }}
