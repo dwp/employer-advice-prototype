@@ -1,0 +1,54 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Have you talked to {{ data['employeeName'] }} about how their condition might affect them?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "what-kind-of-illness-or-disability"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "talkedToEmployee",
+        name: "talkedToEmployee",
+        value: data['talkedToEmployee'],
+        fieldset: {
+          legend: {
+            text: "Have you talked to " + data['employeeName'] + " about how their condition might affect them?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~/sprint-3/disclose-condition/prototype-D/could-employee-stay-at-work",
+            text: "Yes",
+            checked: data['talkedToEmployee'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['talkedToEmployee'] === 'No'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
