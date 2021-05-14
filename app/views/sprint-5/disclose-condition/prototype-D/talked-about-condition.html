@@ -31,12 +31,12 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} abo
         },
         items: [
           {
-            value: "Yes",
+            value: "Yes~/sprint-5/disclose-condition/prototype-D/could-employee-stay-at-work",
             text: "Yes",
             checked: data['talkedToEmployee'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/disclose-condition/prototype-C/talking-about-condition",
+            value: "No",
             text: "No",
             checked: data['talkedToEmployee'] === 'No'
           }
@@ -48,7 +48,7 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} abo
       }) }}
 
       <div class="unbrandedFooter">
-        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
           <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
         </p>
       </div>

@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Have you contacted your employee since they have been off work sick?
+  Does your employee need changes to their workplace or their ways of working before they can return to work safely?
 {% endblock %}
 
 {% block content %}
@@ -13,37 +13,36 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "must-pay-ssp"
+        href: "what-to-say-to-employee"
       }) }}
-
-      <!-- <br><br> -->
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "contactedEmployeeA",
-        name: "contactedEmployeeA",
-        value: data['offBecauseCovid'],
+        idPrefix: "doesEmployeeNeedChangesA",
+        name: "doesEmployeeNeedChangesA",
         fieldset: {
           legend: {
-            text: "Have you contacted your employee since they have been off work sick?",
+            text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
-        },
-        hint: {
-          text: "For example, with a phone call, letter or text message"
         },
         items: [
           {
             value: "Yes",
             text: "Yes",
-            checked: data['contactedEmployeeA'] === 'Yes'
+            checked: data['doesEmployeeNeedChangesA'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/gone-off-work/prototype-A/get-in-touch-with-employee",
+            value: "No",
             text: "No",
-            checked: data['contactedEmployeeA'] === 'No'
+            checked: data['doesEmployeeNeedChangesA'] === 'No'
+          },
+          {
+            value: "I’m not sure~/sprint-5/gone-off-work/prototype-A/must-talk-about-possible-changes",
+            text: "I’m not sure",
+            checked: data['doesEmployeeNeedChangesA'] === 'I’m not sure'
           }
         ]
       }) }}

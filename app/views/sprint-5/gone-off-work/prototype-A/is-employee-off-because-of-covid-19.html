@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Have you contacted your employee since they have been off work sick?
+  Is your employee off work sick because of coronavirus (COVID-19)?
 {% endblock %}
 
 {% block content %}
@@ -13,52 +13,52 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "is-employee-off-because-of-covid-19"
+        href: "when-did-employee-go-off-work-sick"
       }) }}
-
-      <!-- <br><br> -->
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "contactedEmployeeB",
-        name: "contactedEmployeeB",
-        value: data['offBecauseCovid'],
+        idPrefix: "offBecauseCovidA",
+        name: "offBecauseCovidA",
+        value: data['offBecauseCovidA'],
         fieldset: {
           legend: {
-            text: "Have you contacted your employee since they have been off work sick?",
+            text: "Is your employee off work sick because of coronavirus (COVID-19)?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
-        },
-        hint: {
-          text: "For example, with a phone call, letter or text message"
         },
         items: [
           {
             value: "Yes",
             text: "Yes",
-            checked: data['contactedEmployeeB'] === 'Yes'
+            checked: data['offBecauseCovidA'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/gone-off-work/prototype-B/want-help-on-what-to-say-to-employee",
+            value: "No~/sprint-5/gone-off-work/prototype-A/must-pay-ssp",
             text: "No",
-            checked: data['contactedEmployeeB'] === 'No'
+            checked: data['offBecauseCovidA'] === 'No'
+          },
+          {
+            value: "I'm not sure",
+            text: "I'm not sure",
+            checked: data['offBecauseCovidA'] === 'I’m not sure'
           }
         ]
       }) }}
-
+      
       {{ govukButton({
         text: "Continue"
       }) }}
+
+      <!-- </form> -->
 
       <div class="unbrandedFooter">
         <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
           <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
         </p>
       </div>
-
-      </form>
     </div>
   </div>
 

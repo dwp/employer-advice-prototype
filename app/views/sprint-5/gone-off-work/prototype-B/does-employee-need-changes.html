@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Is your employee off work because of coronavirus (COVID-19)?
+  Does your employee need changes to their workplace or their ways of working before they can return to work safely?
 {% endblock %}
 
 {% block content %}
@@ -13,18 +13,17 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "when-did-employee-go-off-work-sick"
+        href: "want-help-on-what-to-say-to-employee"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
 
       {{ govukRadios({
-        idPrefix: "offBecauseCovidB",
-        name: "offBecauseCovidB",
-        value: data['offBecauseCovidB'],
+        idPrefix: "doesEmployeeNeedChangesB",
+        name: "doesEmployeeNeedChangesB",
         fieldset: {
           legend: {
-            text: "Is your employee off work because of coronavirus (COVID-19)?",
+            text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -33,33 +32,32 @@
           {
             value: "Yes",
             text: "Yes",
-            checked: data['offBecauseCovidB'] === 'Yes'
+            checked: data['doesEmployeeNeedChangesB'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/gone-off-work/prototype-B/have-you-contacted-employee",
+            value: "No",
             text: "No",
-            checked: data['offBecauseCovidB'] === 'No'
+            checked: data['doesEmployeeNeedChangesB'] === 'No'
           },
           {
-            value: "I’m not sure",
+            value: "I’m not sure~/sprint-5/gone-off-work/prototype-B/recommendations-for-you",
             text: "I’m not sure",
-            checked: data['offBecauseCovidB'] === 'I’m not sure'
+            checked: data['doesEmployeeNeedChangesB'] === 'I’m not sure'
           }
         ]
       }) }}
-      
+
       {{ govukButton({
         text: "Continue"
       }) }}
-
-      <!-- </form> -->
 
       <div class="unbrandedFooter">
         <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
           <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
         </p>
       </div>
-      
+
+      </form>
     </div>
   </div>
 

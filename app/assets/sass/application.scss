@@ -31,10 +31,6 @@ $govuk-assets-path: '/govuk/assets/';
     border: 1px solid rgb(0, 0, 0);
     padding: 20px;
     margin-bottom: 25px;
-   }
-
-   //Checklist page box components
-
    .checklistCheckbox{
     background-color: #FFFFFF;
     width: 40px;
@@ -49,7 +45,7 @@ $govuk-assets-path: '/govuk/assets/';
   .govuk-grid-row {
     margin-right: 0;
     margin-left: 0;
-}
+  }
   .govuk-grid-column-one-third {
     padding: 0;
   }
