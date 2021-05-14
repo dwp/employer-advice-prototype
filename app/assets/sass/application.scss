@@ -25,3 +25,24 @@ $govuk-assets-path: '/govuk/assets/';
    .govuk-button:hover {
     background-color: #444;
    }
+
+  .checklistCard {
+    background-color: #FFFFFF;
+    width: auto;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 25px;
+   }
+
+   .checklistCheckbox{
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    float: right;
+   }
+
+   .checklistCardSpacing {
+     margin-top: 60px;
+     margin-bottom: 60px;
+   }
