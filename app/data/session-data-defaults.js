@@ -21,4 +21,6 @@ module.exports = {
 
   // Insert values here
 
+  "employeeName": "your employee"
+
 }
