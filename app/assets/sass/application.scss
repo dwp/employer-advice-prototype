@@ -24,4 +24,39 @@ $govuk-assets-path: '/govuk/assets/';
    }
    .govuk-button:hover {
     background-color: #444;
+<<<<<<< Updated upstream
    }
+=======
+   }
+
+  .checklistCard {
+    background-color: #FFFFFF;
+    width: auto;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 25px;
+   }
+
+   .checklistCheckbox{
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    float: right;
+   }
+
+   .checklistCardSpacing {
+     margin-top: 60px;
+     margin-bottom: 60px;
+   }
+   .govuk-grid-column-one-third {
+     padding: 0;
+   }
+   .govuk-grid-column-one-third p, .govuk-grid-column-one-third li {
+    font-size: 1rem;
+  }
+   .govuk-grid-row {
+    margin-right: 0;
+    margin-left: 0;
+}
+>>>>>>> Stashed changes
