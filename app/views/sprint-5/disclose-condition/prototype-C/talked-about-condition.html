@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName']|default('your employee', true) }} to decide on the changes you will make?
+Have you talked to {{ data['employeeName']|default('your employee', true) }} about how their condition might affect them?
 {% endblock %}
 
 {% block content %}
@@ -13,35 +13,32 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} to 
 
       {{ govukBackLink({
         text: "Back",
-        href: "could-employee-stay-at-work"
+        href: "what-kind-of-illness-or-disability"
       }) }}
 
       <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
 
       {{ govukRadios({
-        idPrefix: "talkedAboutChanges",
-        name: "talkedAboutChanges",
-        value: data['talkedAboutChanges'],
+        idPrefix: "talkedToEmployee",
+        name: "talkedToEmployee",
+        value: data['talkedToEmployee'],
         fieldset: {
           legend: {
-            text: "Have you talked to " + data['employeeName']|default('your employee', true) + " to decide on the changes you will make?",
+            text: "Have you talked to " + data['employeeName']|default('your employee', true) + " about how their condition might affect them?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
-        },
-        hint: {
-          text: "Changes will be more effective if you have an open conversation as early as you can."
         },
         items: [
           {
             value: "Yes",
             text: "Yes",
-            checked: data['talkedAboutChanges'] === 'Yes'
+            checked: data['talkedToEmployee'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/disclose-condition/prototype-D/deciding-changes-at-work",
+            value: "No~/sprint-5/disclose-condition/prototype-C/talking-about-condition",
             text: "No",
-            checked: data['talkedAboutChanges'] === 'No'
+            checked: data['talkedToEmployee'] === 'No'
           }
         ]
       }) }}
@@ -51,7 +48,7 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} to 
       }) }}
 
       <div class="unbrandedFooter">
-        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
           <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
         </p>
       </div>
