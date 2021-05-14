@@ -34,6 +34,8 @@ $govuk-assets-path: '/govuk/assets/';
     margin-bottom: 25px;
    }
 
+   //Checklist page box components
+
    .checklistCheckbox{
     background-color: #FFFFFF;
     width: 40px;
@@ -45,4 +47,25 @@ $govuk-assets-path: '/govuk/assets/';
    .checklistCardSpacing {
      margin-top: 60px;
      margin-bottom: 60px;
+   }
+
+   .unbrandedFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F0EFEF;
+    color: white;
+    // text-align: left;
+   }
+
+   //Footer CSS
+
+   .unbrandedJourneyName {
+    margin-top: 1%;
+    margin-left: 23%;
+   }
+
+   .unbrandedClearData {
+    margin-left: 35%;
    }

@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Could {{ data['employeeName'] }} stay at work with changes and support?
+Could {{ data['employeeName']|default('your employee', true) }} stay at work with changes and support?
 {% endblock %}
 
 {% block content %}
@@ -24,7 +24,7 @@ Could {{ data['employeeName'] }} stay at work with changes and support?
         value: data['couldEmployeeStayAtWork'],
         fieldset: {
           legend: {
-            text: "Could " + data['employeeName'] + " stay at work with changes and support?",
+            text: "Could " + data['employeeName']|default('your employee', true) + " stay at work with changes and support?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -54,6 +54,12 @@ Could {{ data['employeeName'] }} stay at work with changes and support?
       {{ govukButton({
         text: "Continue"
       }) }}
+
+      <div class="unbrandedFooter">
+        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+          <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+        </p>
+      </div>
 
       </form>
     </div>
