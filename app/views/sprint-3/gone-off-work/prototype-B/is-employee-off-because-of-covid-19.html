@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "when-did-employee-leave"
+        href: "when-did-employee-go-off-work-sick"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
@@ -41,9 +41,9 @@
             checked: data['offBecauseCovidB'] === 'No'
           },
           {
-            value: "Not sure",
-            text: "Not sure",
-            checked: data['offBecauseCovidB'] === 'Not sure'
+            value: "I’m not sure",
+            text: "I’m not sure",
+            checked: data['offBecauseCovidB'] === 'I’m not sure'
           }
         ]
       }) }}

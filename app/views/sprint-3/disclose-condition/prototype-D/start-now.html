@@ -1,0 +1,36 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Supporting an employee with an illness or disability
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Supporting an employee with an illness or disability
+      </h1>
+
+      <p>
+        This form is for employers and line managers. It will help you to:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>talk to your employee about any support they might need</li>
+        <li>agree any changes at work that will help</li>
+      </ul>
+
+      <br>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "employee-name",
+        isStartButton: true
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Are you confident communicating with your employee while they are off sick?
+  Do you want help on what to say to your employee while they are off work sick?
 {% endblock %}
 
 {% block content %}
@@ -24,26 +24,21 @@
         value: data['confidentCommunicatingWithEmployeeB'],
         fieldset: {
           legend: {
-            text: "Are you confident communicating with your employee while they are off sick?",
+            text: "Do you want help on what to say to your employee while they are off work sick?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
           {
-            value: "Yes",
+            value: "Yes~/sprint-3/gone-off-work/prototype-B/does-employee-need-changes",
             text: "Yes",
             checked: data['confidentCommunicatingWithEmployeeB'] === 'Yes'
           },
           {
-            value: "No~/sprint-3/gone-off-work/prototype-B/does-employee-need-changes",
+            value: "No",
             text: "No",
             checked: data['confidentCommunicatingWithEmployeeB'] === 'No'
-          },
-          {
-            value: "Not sure",
-            text: "Not sure",
-            checked: data['confidentCommunicatingWithEmployeeB'] === 'Not sure'
           }
         ]
       }) }}

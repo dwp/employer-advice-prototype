@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Does your employee need changes to their workplace before they can return to work safely?
+  Does your employee need changes to their workplace or their ways of working before they can return to work safely?
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "results"
+        href: "what-to-say-to-employee"
       }) }}
 
       <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
@@ -23,7 +23,7 @@
         name: "doesEmployeeNeedChangesA",
         fieldset: {
           legend: {
-            text: "Does your employee need changes to their workplace before they can return to work safely?",
+            text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -40,9 +40,9 @@
             checked: data['doesEmployeeNeedChangesA'] === 'No'
           },
           {
-            value: "I don’t know~/sprint-3/gone-off-work/prototype-A/you-must-talk-about-reasonable-adjustments",
-            text: "I don’t know",
-            checked: data['doesEmployeeNeedChangesA'] === 'I don’t know'
+            value: "I’m not sure~/sprint-3/gone-off-work/prototype-A/must-talk-about-possible-changes",
+            text: "I’m not sure",
+            checked: data['doesEmployeeNeedChangesA'] === 'I’m not sure'
           }
         ]
       }) }}
