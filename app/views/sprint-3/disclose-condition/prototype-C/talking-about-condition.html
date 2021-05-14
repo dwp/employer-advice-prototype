@@ -17,9 +17,9 @@ Talking about the condition
     <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
     <h1 class="govuk-heading-l">Talking about the condition</h1>
 
-    <p class="govuk-body">It’s important to talk to {{ data['employeeName'] }} as early as you can</p>
+    <p class="govuk-body">It’s important to talk to {{ data['employeeName']|default('your employee', true) }} as early as you can</p>
 
-    <p class="govuk-body">There’s no perfect way to do it, but it is important to be open to suggestions and let {{ data['employeeName'] }} tell you what would help. Start with how {{ data['employeeName'] }} is generally, then move on to work.</p>
+    <p class="govuk-body">There’s no perfect way to do it, but it is important to be open to suggestions and let {{ data['employeeName']|default('your employee', true) }} tell you what would help. Start with how {{ data['employeeName']|default('your employee', true) }} is generally, then move on to work.</p>
        
     <p class="govuk-body">You can ask things like:</p>
     
@@ -46,7 +46,7 @@ Talking about the condition
     <h1 class="govuk-heading-m">Will they stay at work or take sick leave?</h1>
 
     <p class="govuk-body">Staying at work can be good for many people, sometimes with changes to their job. Others will need to take time off.</p>
-    <p class="govuk-body">You can ask {{ data['employeeName'] }} if they think they would benefit from staying at work, or if they need some sick leave at first.</p>
+    <p class="govuk-body">You can ask {{ data['employeeName']|default('your employee', true) }} if they think they would benefit from staying at work, or if they need some sick leave at first.</p>
     <p class="govuk-body">If you need advice, you can get help from an occupational health expert. They can help your business to maintain a healthy workforce.</p>
       
     <ul class="govuk-list">
@@ -67,8 +67,8 @@ Talking about the condition
       
     <h1 class="govuk-heading-m">Are there any changes at work that would help?</h1>
 
-    <p class="govuk-body">Changes could be needed to help {{ data['employeeName'] }} stay at work. Things like reduced hours, different shifts or avoiding some duties can help.</p>
-    <p class="govuk-body">You should ask {{ data['employeeName'] }} about changes that would help them. You can make suggestions, but it’s important to let them take the lead.</p>
+    <p class="govuk-body">Changes could be needed to help {{ data['employeeName']|default('your employee', true) }} stay at work. Things like reduced hours, different shifts or avoiding some duties can help.</p>
+    <p class="govuk-body">You should ask {{ data['employeeName']|default('your employee', true) }} about changes that would help them. You can make suggestions, but it’s important to let them take the lead.</p>
 
     <ul class="govuk-list">
       <li>
@@ -87,6 +87,12 @@ Talking about the condition
 
     <div class="govuk-inset-text">
       Use <a href="checklist-talking-about-the-condition">this checklist</a> in your conversation with your employee.
+    </div>
+
+    <div class="unbrandedFooter">
+      <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+        <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+      </p>
     </div>
 
   </div>

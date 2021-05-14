@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName'] }} about how their condition might affect them?
+Have you talked to {{ data['employeeName']|default('your employee', true) }} about how their condition might affect them?
 {% endblock %}
 
 {% block content %}
@@ -24,7 +24,7 @@ Have you talked to {{ data['employeeName'] }} about how their condition might af
         value: data['talkedToEmployee'],
         fieldset: {
           legend: {
-            text: "Have you talked to " + data['employeeName'] + " about how their condition might affect them?",
+            text: "Have you talked to " + data['employeeName']|default('your employee', true) + " about how their condition might affect them?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -46,6 +46,12 @@ Have you talked to {{ data['employeeName'] }} about how their condition might af
       {{ govukButton({
         text: "Continue"
       }) }}
+
+      <div class="unbrandedFooter">
+        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+          <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+        </p>
+      </div>
 
       </form>
     </div>

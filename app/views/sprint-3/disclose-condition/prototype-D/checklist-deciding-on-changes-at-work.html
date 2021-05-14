@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName'] }} to decide on the changes you will make?
+Have you talked to {{ data['employeeName']|default('your employee', true) }} to decide on the changes you will make?
 {% endblock %}
 
 {% block content %}
@@ -114,7 +114,11 @@ Have you talked to {{ data['employeeName'] }} to decide on the changes you will 
 
 
 
-
+      <div class="unbrandedFooter">
+        <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+          <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+        </p>
+      </div>
 
 
       </form>

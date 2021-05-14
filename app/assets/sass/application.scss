@@ -33,6 +33,8 @@ $govuk-assets-path: '/govuk/assets/';
     margin-bottom: 25px;
    }
 
+   //Checklist page box components
+
    .checklistCheckbox{
     background-color: #FFFFFF;
     width: 40px;
@@ -54,8 +56,23 @@ $govuk-assets-path: '/govuk/assets/';
   .govuk-grid-column-one-third p, .govuk-grid-column-one-third li {
     font-size: 1rem;
   }
+   .unbrandedFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F0EFEF;
+    color: white;
+    // text-align: left;
+   }
 
-  
+   //Footer CSS
 
+   .unbrandedJourneyName {
+    margin-top: 1%;
+    margin-left: 23%;
+   }
 
-
+   .unbrandedClearData {
+    margin-left: 35%;
+   }
