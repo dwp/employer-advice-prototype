@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName']|default('your employee', true) }} to decide on the changes you will make?
+Have you talked to {{ data['employeeNameD']|default('your employee', true) }} to decide on the changes you will make?
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} to 
 
       <h1 class="govuk-heading-l">Deciding on changes at work (reasonable adjustments)</h1>
 
-      <p class="govuk-body">Changes to how {{ data['employeeName']|default('your employee', true) }} works could be needed. Things like reduced hours, different shifts or avoiding some duties can help.</p>
+      <p class="govuk-body">Changes to how {{ data['employeeNameD']|default('your employee', true) }} works could be needed. Things like reduced hours, different shifts or avoiding some duties can help.</p>
 
       <p class="govuk-body">Changes that might help physical conditions include:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -31,7 +31,7 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} to 
         <li>specialist equipment, like a keyboard for people with arthritis</li>
       </ul>
 
-      <p class="govuk-body">You should ask {{ data['employeeName']|default('your employee', true) }} if any of these changes would help them. You can make suggestions, but it’s important to let them take the lead if possible.</p>
+      <p class="govuk-body">You should ask {{ data['employeeNameD']|default('your employee', true) }} if any of these changes would help them. You can make suggestions, but it’s important to let them take the lead if possible.</p>
 
       <!-- Make changes section -->
 

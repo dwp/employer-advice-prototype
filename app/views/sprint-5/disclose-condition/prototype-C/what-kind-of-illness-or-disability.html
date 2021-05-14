@@ -19,12 +19,12 @@ What kind of illness or disability does your employee have?
       <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
 
       {{ govukRadios({
-        idPrefix: "typeOfIllness",
-        name: "typeOfIllness",
-        value: data['typeOfIllness'],
+        idPrefix: "typeOfIllnessC",
+        name: "typeOfIllnessC",
+        value: data['typeOfIllnessC'],
         fieldset: {
           legend: {
-            text: "What kind of illness or disability does " + data['employeeName']|default('your employee', true) + " have?",
+            text: "What kind of illness or disability does " + data['employeeNameC']|default('your employee', true) + " have?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -36,17 +36,17 @@ What kind of illness or disability does your employee have?
           {
             value: "Stress or other mental health condition",
             text: "Stress or other mental health condition",
-            checked: data['typeOfIllness'] === 'Stress or other mental health condition'
+            checked: data['typeOfIllnessC'] === 'Stress or other mental health condition'
           },
           {
             value: "Physical injury, strain or disability~/sprint-5/disclose-condition/prototype-C/talked-about-condition",
             text: "Physical injury, strain or disability",
-            checked: data['typeOfIllness'] === 'Physical injury, strain or disability'
+            checked: data['typeOfIllnessC'] === 'Physical injury, strain or disability'
           },
           {
             value: "A disease, heart or breathing problem",
             text: "A disease, heart or breathing problem",
-            checked: data['typeOfIllness'] === 'A disease, heart or breathing problem'
+            checked: data['typeOfIllnessC'] === 'A disease, heart or breathing problem'
           }
         ]
       }) }}

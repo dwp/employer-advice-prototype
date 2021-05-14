@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-Have you talked to {{ data['employeeName']|default('your employee', true) }} about how their condition might affect them?
+Have you talked to {{ data['employeeNameD']|default('your employee', true) }} about how their condition might affect them?
 {% endblock %}
 
 {% block content %}
@@ -19,12 +19,12 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} abo
       <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
 
       {{ govukRadios({
-        idPrefix: "talkedToEmployee",
-        name: "talkedToEmployee",
-        value: data['talkedToEmployee'],
+        idPrefix: "talkedToEmployeeD",
+        name: "talkedToEmployeeD",
+        value: data['talkedToEmployeeD'],
         fieldset: {
           legend: {
-            text: "Have you talked to " + data['employeeName']|default('your employee', true) + " about how their condition might affect them?",
+            text: "Have you talked to " + data['employeeNameD']|default('your employee', true) + " about how their condition might affect them?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -33,12 +33,12 @@ Have you talked to {{ data['employeeName']|default('your employee', true) }} abo
           {
             value: "Yes~/sprint-5/disclose-condition/prototype-D/could-employee-stay-at-work",
             text: "Yes",
-            checked: data['talkedToEmployee'] === 'Yes'
+            checked: data['talkedToEmployeeD'] === 'Yes'
           },
           {
             value: "No",
             text: "No",
-            checked: data['talkedToEmployee'] === 'No'
+            checked: data['talkedToEmployeeD'] === 'No'
           }
         ]
       }) }}
