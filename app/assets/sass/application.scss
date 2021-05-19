@@ -50,13 +50,15 @@ $govuk-assets-path: '/govuk/assets/';
    }
 
    .unbrandedFooter {
-    position: fixed;
+    // position: fixed;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 40px;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #F0EFEF;
     color: white;
-    // text-align: left;
    }
 
    //Footer CSS
@@ -67,7 +69,7 @@ $govuk-assets-path: '/govuk/assets/';
    }
 
    .unbrandedClearData {
-    margin-left: 35%;
+    margin-left: 15%;
    }
 
   .govuk-grid-row {
