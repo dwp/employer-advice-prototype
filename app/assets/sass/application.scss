@@ -49,29 +49,6 @@ $govuk-assets-path: '/govuk/assets/';
      margin-bottom: 60px;
    }
 
-   .unbrandedFooter {
-    // position: fixed;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    height: 40px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #F0EFEF;
-    color: white;
-   }
-
-   //Footer CSS
-
-   .unbrandedJourneyName {
-    margin-top: 1%;
-    margin-left: 3%;
-   }
-
-   .unbrandedClearData {
-    margin-left: 10%;
-   }
-
   .govuk-grid-row {
     margin-right: 0;
     margin-left: 0;
@@ -81,4 +58,78 @@ $govuk-assets-path: '/govuk/assets/';
   }
   .govuk-grid-column-one-third p, .govuk-grid-column-one-third li {
     font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 698px)  {
+    .unbrandedFooter {
+      // position: fixed;
+      padding-top: 0.5%;
+      padding-bottom: 3%;
+      height: 50px;
+      // left: 0;
+      // bottom: 0;
+      width: 100%;
+      background-color: #F0EFEF;
+      color: white;
+      clear: both;
+     }
+
+     .unbrandedJourneyName {
+      margin-top: 1%;
+      margin-left: 3%;
+     }
+  
+     .unbrandedClearData {
+      // margin-left: 16%;
+      margin-top: 1%;
+      display: block;
+     }
+  }
+
+  @media only screen and (min-width: 699px) and (max-width: 799px)  {
+    .unbrandedFooter {
+      // position: fixed;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      height: 40px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #F0EFEF;
+      color: white;
+      clear: both;
+     }
+
+     .unbrandedJourneyName {
+      margin-top: 1%;
+      margin-left: 3%;
+     }
+  
+     .unbrandedClearData {
+      margin-left: 20%;
+     }
+  }
+
+  @media only screen and (min-width: 799px)  {
+    .unbrandedFooter {
+      position: fixed;
+      // padding-top: 5%;
+      height: 40px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #F0EFEF;
+      color: white;
+      clear: both;
+      text-align: center;
+     }
+
+     .unbrandedJourneyName {
+      margin: auto;
+      padding-top: 0.5%;
+     }
+  
+     .unbrandedClearData {
+      margin-left: 20%;
+     }
   }
