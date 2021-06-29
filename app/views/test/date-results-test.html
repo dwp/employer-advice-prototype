@@ -27,7 +27,7 @@
       -->
       {% if data['daysEmployeeOffSick'] <= '3'  %}
 
-        <h1 class="govuk-heading-xl">You do not need to pay Statutory Sick Pay yet</h1>
+        <h1 class="govuk-heading-l">You do not need to pay Statutory Sick Pay yet</h1>
 
         <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
 
@@ -41,7 +41,7 @@
 
       {% elif (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
 
-        <h1 class="govuk-heading-xl">You must pay Statutory Sick Pay</h1>
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay</h1>
 
         <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
 
@@ -60,7 +60,7 @@
 
       {% else %}
 
-        <h1 class="govuk-heading-xl">You must pay Statutory Sick Pay</h1>
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay</h1>
 
         <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
 
