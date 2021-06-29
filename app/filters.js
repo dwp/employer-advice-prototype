@@ -7,6 +7,8 @@ module.exports = function (env) {
    */
   var filters = {}
 
+  // const daysjs = require("daysjs");
+
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
     @example:
@@ -38,8 +40,69 @@ module.exports = function (env) {
 
   ------------------------------------------------------------------ */
 
+  /*
+  ====================================================================
+  arrayToDateObject
+  --------------------------------------------------------------------
+  Convert array to javascript date object
+  ====================================================================
+
+  Usage:
+
+  {{ [1,2,2020] | arrayToDateObject }}
+
+  = 2020-02-01T00:00:00.000Z
+
+*/
+
+
+  // filters.arrayToDateObject = (array) => {
+  //   return new Date(array[2], array[1] -1, array[0])
+  // }
+
+  // // Output date array - for use in design system macros macros
+  // filters.toDateArray = (date) => {
+  //   if (!date) return []
+  //   if (_.isArray(date)) return date
+  //   else {
+  //     return [daysjs(date).date(), daysjs(date).month() + 1, daysjs(date).year()]
+  //   }
+  // }
+
+  /*
+  ====================================================================
+  today
+  --------------------------------------------------------------------
+  Today's date as javascript date object
+  ====================================================================
+
+  Usage:
+
+    {{ "" | today }}
+
+  = 2020-02-01T00:00:00.000Z
+
+*/
+
+  // filters.today = () => {
+  //   // var now = dayjs()
+  //   return new Date()
+  // }
+
+  
+
+  // filters.formatDate = (date, format, dateFormat) => {
+  
+  //         return daysjs(returnDate).fromNow()
+  //         // return timeAgoInDays(returnDate)
+  
+  // }
+
+
+
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */
+
   return filters
 }
