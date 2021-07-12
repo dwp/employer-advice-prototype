@@ -16,7 +16,8 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-.govuk-button {
+//Changed from govuk-button to govuk-button-unbranded when team switched from unbranded to gov uk branded prototype. Due to same names green 'start now' buttons were being overridden. 
+.govuk-button_unbranded {
     background-color: #000;
     border-radius: 50px;
     padding-left: 20px;
