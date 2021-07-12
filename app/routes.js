@@ -11,6 +11,13 @@ router.use(radioButtonRedirect)
 
 // Add your routes here - above the module.exports line
 
+//Point to individual routes files for each iteration
+router.use('/beta/sprint-3', require('./views/beta/sprint-3/routes'));
+
+// router.use('/beta/sprint-:routeVersion', (req, res, next) => {
+//   var routeVersion = req.params.routeVersion
+//   require('./beta/sprint-' + routeVersion + '/routes')(req, res, next)
+// })
 
 // Examples 
 router.post('/test/date-test-answer', function (req, res) {
