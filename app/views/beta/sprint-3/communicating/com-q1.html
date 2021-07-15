@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you want help on what to say to your employee while they are off work sick?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="is-employee-off-because-of-covid-19" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "start-now"
+      }) }}
+
+      {{ govukRadios({
+        idPrefix: "confidentCommunicatingWithEmployeeA",
+        name: "confidentCommunicatingWithEmployeeA",
+        value: data['confidentCommunicatingWithEmployeeA'],
+        fieldset: {
+          legend: {
+            text: "Do you want help on what to say to your employee while they are off work sick?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~/sprint-5/gone-off-work/prototype-A/what-to-say-to-employee",
+            text: "Yes",
+            checked: data['confidentCommunicatingWithEmployeeA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['confidentCommunicatingWithEmployeeA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}
