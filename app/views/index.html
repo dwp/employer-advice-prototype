@@ -1,5 +1,5 @@
 
-{% extends "layout_unbranded.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Prototype
@@ -8,29 +8,97 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-xl">
         Prototype
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
+
+      <h3 class="govuk-heading-m">Current testing versions</h2>
+
+        <p><a href="beta/sprint-3/start/sta-1.html">Employee gone off work</a></p>
+  
+        <p><a href="beta/sprint-3/start/sta-2.html">Employee discloses condition</a></p>
+  
+        <p><a href="beta/sprint-3/start/sta-3.html">Employee returning to work</a></p>
+
+
+      <!-- Beta iterations -->
+
+    
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Beta</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" width="10%">Sprint</th>
+            <th scope="col" class="govuk-table__header" width="15%">Date</th>
+            <th scope="col" class="govuk-table__header" width="50%">Information</th>
+            <th scope="col" class="govuk-table__header" width="15%">Links</th>
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Sprint 3</th>
+            <td class="govuk-table__cell">8 July 2021</td>
+            <td class="govuk-table__cell">RET stage and condition specific content</td>
+            <td class="govuk-table__cell"><a href="beta/sprint-3/start/sta-1.html">STA1</a> <a href="beta/sprint-3/start/sta-2.html">STA2</a> <a href="beta/sprint-3/start/sta-3.html">STA3</a> </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+            <!-- Alpha iterations -->
+
+    
+            <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-table__caption--m">Alpha</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header" width="10%">Sprint</th>
+                  <th scope="col" class="govuk-table__header" width="15%">Date</th>
+                  <th scope="col" class="govuk-table__header" width="50%">Information</th>
+                  <th scope="col" class="govuk-table__header" width="15%">Links</th>
       
-      <!-- <h2 class="govuk-heading-m">Sprint 5</h2> -->
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Sprint 5</th>
+                  <td class="govuk-table__cell">11 May 2021</td>
+                  <td class="govuk-table__cell">Drip feed vs Results at end, dicloses condition & checklists</td>
+                  <td class="govuk-table__cell"><a href="sprint-5/gone-off-work/prototype-A/start-now">A</a> <a href="sprint-5/gone-off-work/prototype-B/start-now">B</a> <a href="sprint-5/disclose-condition/prototype-C/start-now">C</a> <a href="sprint-5/disclose-condition/prototype-D/start-now">D</a></td>
+                </tr>
+              </tbody>
+            </table>
 
-      <p><a href="sprint-5/gone-off-work/prototype-A/start-now">Employee gone off work (Prototype A)</a></p>
-      
-      <p><a href="sprint-5/gone-off-work/prototype-B/start-now">Employee gone off work (Prototype B)</a></p>
 
-      <p><a href="sprint-5/disclose-condition/prototype-C/start-now">Employee discloses condition (Prototype C)</a></p>
 
-      <p><a href="sprint-5/disclose-condition/prototype-D/start-now">Employee discloses condition (Prototype D)</a></p>
+       <!-- Feature tests -->
 
-      <h2 class="govuk-heading-m">Media queries test</h2>
+    
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Feature tests</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" width="10%">Sprint</th>
+            <th scope="col" class="govuk-table__header" width="15%">Date</th>
+            <th scope="col" class="govuk-table__header" width="50%">Information</th>
+            <th scope="col" class="govuk-table__header" width="15%">Links</th>
 
-      <p><a href="test/radio-test.html">Radio page</a></p>
-
-      <p><a href="test/results-test.html">Results page</a></p>
-      
-    </div>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">N/A</th>
+            <td class="govuk-table__cell">29 June 2021</td>
+            <td class="govuk-table__cell">Amount of days off sick test pages</td>
+            <td class="govuk-table__cell"><a href="test/date-test">Link</a></td>
+          </tr>
+        </tbody>
+      </table>
+     
+    
   </div>
 
 {% endblock %}
