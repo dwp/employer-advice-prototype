@@ -1,0 +1,25 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-xl">
+        Prototype
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+
+      <h3 class="govuk-heading-m">Current testing versions</h2>
+
+        <p><a href="beta/sprint-3/start/sta-1.html">One health condition</a></p>
+  
+        <p><a href="beta/sprint-3/start/sta-2.html">Two health conditions</a></p>     
+    
+  </div>
+
+{% endblock %}
