@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Reasonable adjustments
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="is-employee-off-because-of-covid-19" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "../establishing/est-q2"
+      }) }}
+
+      <h1 class="govuk-heading-l">
+        Reasonable adjustments
+      </h1>
+
+      <p class="govuk-body">Not yet prototyped. <a href="../return-to-work/ret-q1.html">Temporary link to RET-Q1</a></a>.</p>
+
+      <!-- {{ govukButton({
+        text: "Continue"
+      }) }} -->
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}
