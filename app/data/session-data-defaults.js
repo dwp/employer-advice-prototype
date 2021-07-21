@@ -21,6 +21,8 @@ module.exports = {
 
   // Insert values here
 
-  "employeeName": "your employee"
+  "employeeName": "your employee",
+
+  "pageTitleAddOn": "– Support employees with disabilities and health conditions – GOV.UK"
 
 }
