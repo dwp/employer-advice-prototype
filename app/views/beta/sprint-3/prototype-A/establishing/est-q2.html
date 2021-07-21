@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What kind of illness or disability does your employee have?
+What kind of illness does your employee have?
 {% endblock %}
 
 {% block content %}
@@ -16,11 +16,11 @@ What kind of illness or disability does your employee have?
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="is-employee-off-because-of-covid-19" method="POST">
+      <form action="../reasonable-adjustments/adj-q1" method="POST">
 
       {{ govukBackLink({
         text: "Back",
-        href: "start-now"
+        href: "est-q3"
       }) }}
 
       <div class="govuk-form-group">
@@ -28,9 +28,12 @@ What kind of illness or disability does your employee have?
             
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-                What kind of illness or disability does your employee have?
+                What kind of illness does your employee have?
             </h1>
           </legend>
+          <div id="waste-hint" class="govuk-hint">
+            You’ll see relevant advice based on your employee’s condition.
+          </div>
           <div id="waste-hint" class="govuk-hint">
             Select all that apply.
           </div>
@@ -38,13 +41,13 @@ What kind of illness or disability does your employee have?
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
-                A mental health condition (such as stress, anxiety or depression)
+                A mental health condition
               </label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                A disease, heart problem or breathing problem
+                A physical condition
               </label>
             </div>
             <div class="govuk-checkboxes__item">
@@ -56,7 +59,7 @@ What kind of illness or disability does your employee have?
             <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    I’m not sure
+                    Something else
                 </label>
               </div>
           </div>
