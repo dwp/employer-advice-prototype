@@ -1,32 +1,52 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Reasonable adjustments
+  Could any changes at work help your employee?
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="is-employee-off-because-of-covid-19" method="POST">
+      <form method="POST">
 
       {{ govukBackLink({
         text: "Back",
         href: "../establishing/est-q2"
       }) }}
 
-      <h1 class="govuk-heading-l">
-        Reasonable adjustments
-      </h1>
+      {{ govukRadios({
+        idPrefix: "couldChangesHelpA",
+        name: "couldChangesHelpA",
+        fieldset: {
+          legend: {
+            text: "Could any changes at work help your employee?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Making changes to someone's job, or giving them extra support, can help them stay at work and be productive"
+        },
+        items: [
+          {
+            value: "Yes~adj-g1",
+            text: "Yes",
+            checked: data['couldChangesHelpA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['couldChangesHelpA'] === 'No'
+          }
+        ]
+      }) }}
 
-      <p class="govuk-body">Not yet prototyped. <a href="../return-to-work/ret-q1.html">Temporary link to RET-Q1</a></a>.</p>
-
-      <!-- {{ govukButton({
+      {{ govukButton({
         text: "Continue"
-      }) }} -->
+      }) }}
 
-    </form>
-      
+      </form>
     </div>
   </div>
 
