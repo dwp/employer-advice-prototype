@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Examples of changes for physical conditions
+Examples of changes for physical conditions {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ Examples of changes for physical conditions
 
       {{ govukBackLink({
         text: "Back",
-        href: "adj-g2"
+        href: "adj-g3"
       }) }}
 
       <h1 class="govuk-heading-l">Examples of changes for physical conditions</h1>
