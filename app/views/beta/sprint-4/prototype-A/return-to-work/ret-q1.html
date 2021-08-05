@@ -10,10 +10,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form method="POST">
 
-      {{ govukBackLink({
-        text: "Back",
-        href: "../reasonable-adjustments/adj-g4"
-      }) }}
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       {{ govukRadios({
         idPrefix: "employeeReadyToReturnA",
@@ -27,17 +24,17 @@
         },
         items: [
           {
-            value: "Yes~ret-g4",
+            value: "Yes~ret-g7",
             text: "Yes",
             checked: data['employeeReadyToReturnA'] === 'Yes'
           },
           {
-            value: "No",
+            value: "No~ret-q2",
             text: "No",
             checked: data['employeeReadyToReturnA'] === 'No'
           },
           {
-            value: "I’m not sure",
+            value: "I’m not sure~ret-g1",
             text: "I’m not sure",
             checked: data['employeeReadyToReturnA'] === 'I’m not sure'
           }

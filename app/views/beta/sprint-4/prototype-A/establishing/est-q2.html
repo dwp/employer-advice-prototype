@@ -16,12 +16,14 @@ What kind of illness does your employee have? {{ data['pageTitleAddOn'] }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="../reasonable-adjustments/adj-q1" method="POST">
+      <form action="ssp-routing" method="POST">
 
-      {{ govukBackLink({
+      <!-- {{ govukBackLink({
         text: "Back",
         href: "est-q3"
-      }) }}
+      }) }} -->
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -31,38 +33,40 @@ What kind of illness does your employee have? {{ data['pageTitleAddOn'] }}
                 What kind of illness does your employee have?
             </h1>
           </legend>
-          <div id="waste-hint" class="govuk-hint">
+          <div id="illnessType-hint" class="govuk-hint">
             You’ll see relevant advice based on your employee’s condition.
           </div>
-          <div id="waste-hint" class="govuk-hint">
+          <div id="illnessType-hint" class="govuk-hint">
             Select all that apply.
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <input class="govuk-checkboxes__input" id="waste" name="illnessType" type="checkbox" value="mentalHealth">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
                 A mental health condition
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              <input class="govuk-checkboxes__input" id="physicalCondition" name="illnessType" type="checkbox" value="physicalCondition">
+              <label class="govuk-label govuk-checkboxes__label" for="physicalCondition">
                 A physical condition
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              <input class="govuk-checkboxes__input" id="Coronavirus" name="illnessType" type="checkbox" value="coronavirus">
+              <label class="govuk-label govuk-checkboxes__label" for="Coronavirus">
                 Coronavirus (COVID-19)
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                <input class="govuk-checkboxes__input" id="somethingElse" name="illnessType" type="checkbox" value="somethingElse">
+                <label class="govuk-label govuk-checkboxes__label" for="somethingElse">
                     Something else
                 </label>
               </div>
           </div>
+
+          <!-- {{ data['illnessType'] === 'checked'}} -->
       
         </fieldset>
       </div>
