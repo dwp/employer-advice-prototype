@@ -10,10 +10,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form method="POST">
 
-      {{ govukBackLink({
-        text: "Back",
-        href: "../start/sta-3"
-      }) }}
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       {{ govukRadios({
         idPrefix: "knowWhatIllnessA",
@@ -31,7 +28,7 @@
         items: [
           {
             value: "Yes",
-            value: "Yes~/beta/sprint-3/prototype-A/establishing/est-q2",
+            value: "Yes~/beta/sprint-4/prototype-A/establishing/est-q2",
             text: "Yes",
             checked: data['knowWhatIllnessA'] === 'Yes'
           },
