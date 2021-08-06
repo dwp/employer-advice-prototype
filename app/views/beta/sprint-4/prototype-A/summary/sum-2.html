@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Your results: what you need to do {{ data['pageTitleAddOn'] }}
+Details of what you need to do {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ Your results: what you need to do {{ data['pageTitleAddOn'] }}
         <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
         <h1 class="govuk-heading-l">
-            Your results: what you need to do
+            Details of what you need to do
         </h1>
 
         <!--
@@ -35,7 +35,6 @@ Your results: what you need to do {{ data['pageTitleAddOn'] }}
         <!-- <h2 class="govuk-heading-s">Because you said your employee:</h2> -->
 
         <p class="govuk-body govuk-!-font-weight-bold">Because you said your employee:</p>
-        
 
         <ul class="govuk-list govuk-list--bullet">
             <li>has been off work sick for {{ data['daysEmployeeOffSick'] }} days</li>
@@ -77,7 +76,7 @@ Your results: what you need to do {{ data['pageTitleAddOn'] }}
 
       <h2 class="govuk-heading-m">What to say to your employee</h2>
 
-        <p class="govuk-body">Helpful things to say:</p>
+        <p class="govuk-body">Helpful things to say include:</p>
 
         <ul class="govuk-list govuk-list--bullet">
             <li>we are sorry to hear you are feeling unwell, we are thinking of you</li>
@@ -88,7 +87,7 @@ Your results: what you need to do {{ data['pageTitleAddOn'] }}
             <li>what, if anything, would you like to be shared with others about your reasons for being absent?</li>
         </ul>
 
-        <p class="govuk-body">Things you should not say to your employee:</p>
+        <p class="govuk-body">Things you should not say to your employee include:</p>
 
         <ul class="govuk-list govuk-list--bullet">
             <li>where did you put x / y / z?</li>
