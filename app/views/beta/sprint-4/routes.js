@@ -17,6 +17,8 @@ router.use(radioButtonRedirect)
 
 router.post('/prototype-A/establishing/ssp-routing', function (req, res) {
 
+    let currentSituation = req.session.data.currentSituation;
+
     const day = Number(req.session.data['employeeLeaveDateDayA'])
     const month = Number(req.session.data['employeeLeaveDateMonthA'])
     const year = Number(req.session.data['employeeLeaveDateYearA'])
@@ -31,18 +33,22 @@ router.post('/prototype-A/establishing/ssp-routing', function (req, res) {
 
     req.session.data['daysEmployeeOffSick'] = daysEmployeeOffSick
 
-    // res.redirect('/test/date-results-test')
+    /*
+        If employee is on "ready to return to work (green journey)", direct them to RET-G7
+        If employee is on "employee is work sick (red journey)", carry out the branching to direct them to the SSP pages 
+    */
 
-    if (daysEmployeeOffSick <= '3') {
-        res.redirect('est-g1');
+    if (currentSituation == 'employeeReadyToReturn'){
+        res.redirect('../return-to-work/ret-g7');
     } else {
-        res.redirect('est-g2&3');
-    }
+        if (daysEmployeeOffSick <= '3') {
+            res.redirect('est-g1');
+        } else {
+            res.redirect('est-g2&3');
+        }
+    }        
 
-    // {% if data['daysEmployeeOffSick'] <= '3'  %}
-
-
-    // {% elif (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+        
 
 
   })
