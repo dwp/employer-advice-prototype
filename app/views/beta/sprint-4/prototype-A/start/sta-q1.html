@@ -10,10 +10,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form method="POST">
 
-      {{ govukBackLink({
-        text: "Back",
-        href: "../start/sta-4"
-      }) }}
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       {{ govukRadios({
         idPrefix: "currentSituation",
