@@ -10,10 +10,7 @@ When did your employee go off work sick? {{ data['pageTitleAddOn'] }}
     <div class="govuk-grid-column-two-thirds">
       <form action="est-q3" method="POST">
 
-      {{ govukBackLink({
-        text: "Back",
-        href: "../start/sta-q1"
-      }) }}
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="date-employee-left-hint">
