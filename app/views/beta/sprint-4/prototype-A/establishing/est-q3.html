@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Do you know what kind of illness your employee has? {{ data['pageTitleAddOn'] }}
+  Has your employee told you about their health condition? {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -17,24 +17,29 @@
         name: "knowWhatIllnessA",
         fieldset: {
           legend: {
-            text: "Do you know what kind of illness your employee has?",
+            text: "Has your employee told you about their health condition?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         hint: {
-          text: "You’ll see relevant advice based on your employee’s condition."
+          text: "Your employee does not have to tell you, but you’re allowed to ask. Knowing about the condition can help you support your employee to return to work when they’re ready."
         },
         items: [
           {
             value: "Yes",
             value: "Yes~/beta/sprint-4/prototype-A/establishing/est-q2",
-            text: "Yes",
+            text: "Yes, my employee has told me",
             checked: data['knowWhatIllnessA'] === 'Yes'
           },
           {
             value: "No",
-            text: "No",
+            text: "No, my employee has not told me",
+            checked: data['knowWhatIllnessA'] === 'No'
+          },
+          {
+            value: "No",
+            text: "I have not asked",
             checked: data['knowWhatIllnessA'] === 'No'
           }
         ]
