@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Do you want help on what to say to your employee while they are off sick? {{ data['pageTitleAddOn'] }} 
+Have you talked to your employee about their condition and any support they need? {{ data['pageTitleAddOn'] }} 
 {% endblock %}
 
 {% block content %}
@@ -14,29 +14,29 @@
       <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       {{ govukRadios({
-        idPrefix: "wantHelpOnWhatToSayA",
-        name: "wantHelpOnWhatToSayA",
-        value: data['wantHelpOnWhatToSayA'],
+        idPrefix: "haveTalkedToEmployee",
+        name: "haveTalkedToEmployee",
+        value: data['haveTalkedToEmployee'],
         fieldset: {
           legend: {
-            text: "Do you want help on what to say to your employee while they are off sick?",
+            text: "Have you talked to your employee about their condition and any support they need?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         hint: {
-          text: "Staying in touch can make your employee feel supported and help you understand the effect on your business."
+          text: "If not, you will see advice about how to discuss any changes you can make."
         },
         items: [
           {
-            value: "Yes~/beta/sprint-4/prototype-A/communicating/com-g1",
+            value: "Yes~/beta/sprint-4/prototype-A/return-to-work/ret-q1",
             text: "Yes",
-            checked: data['wantHelpOnWhatToSayA'] === 'Yes'
+            checked: data['haveTalkedToEmployee'] === 'Yes'
           },
           {
-            value: "No~/beta/sprint-4/prototype-A/return-to-work/ret-q1",
+            value: "No~/beta/sprint-5/prototype-A/communicating/com-g2",
             text: "No",
-            checked: data['wantHelpOnWhatToSayA'] === 'No'
+            checked: data['haveTalkedToEmployee'] === 'No'
           }
         ]
       }) }}
