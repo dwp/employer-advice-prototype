@@ -23,6 +23,6 @@ module.exports = {
 
   "employeeName": "your employee",
 
-  "pageTitleAddOn": "– Support employees with disabilities and health conditions – GOV.UK"
+  "pageTitleAddOn": "– Support and manage disabled employees and employees with health conditions at work – GOV.UK"
 
 }
