@@ -11,11 +11,7 @@ router.use(radioButtonRedirect)
 
 // Add your routes here - above the module.exports line
 
-// router.post('/start/test', function (req, res) {
-//     res.redirect('test-2');
-// });
-
-router.post('/prototype-A/establishing/ssp-routing', function (req, res) {
+router.post('/mvp-journey/ssp-routing', function (req, res) {
 
     let currentSituation = req.session.data.currentSituation;
 
@@ -48,21 +44,42 @@ router.post('/prototype-A/establishing/ssp-routing', function (req, res) {
         }
     }        
 
-    router.post('/mvp/current-situation-routing', function (req, res) {
-        let currentSituation = req.session.data.currentSituation;
+//     router.post('/mvp/current-situation-routing', function (req, res) {
+//         let currentSituation = req.session.data.currentSituation;
 
-        if (currentSituation == 'atWork'){
-            res.redirect('com-q1');
-        }    
-        else if (currentSituation == 'offWork'){
-            res.redirect('est-g4');
-        }
-        else {
-            res.redirect('est-q3');
-        }
-      })      
+//         if (currentSituation == 'atWork'){
+//             res.redirect('com-q1');
+//         }    
+//         else if (currentSituation == 'offWork'){
+//             res.redirect('est-g4');
+//         }
+//         else {
+//             res.redirect('est-q3');
+//         }
+//       })      
 
 
-  })
+ })
+
+/* 
+ Ben use this example
+*/
+
+ router.post('/mvp-journey/current-situation-routing', function (req, res) {
+
+    let currentSituation = req.session.data.currentSituation;
+
+    if (currentSituation == 'ongoingCondition'){
+        res.redirect('est-g4');
+    } else if (currentSituation == 'offWork') {
+        res.redirect('est-q1');
+    } else {
+        res.redirect('est-q3');
+    }   
+});
+
+/* 
+ End of example
+*/
 
 module.exports = router

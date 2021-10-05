@@ -46,10 +46,7 @@ router.post('/prototype-A/establishing/ssp-routing', function (req, res) {
         } else {
             res.redirect('est-g2&3');
         }
-    }        
-
-        
-
+    }
 
   })
 
