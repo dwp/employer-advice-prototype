@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your current situation? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="current-situation-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <div class="govuk-width-container">
+        <a href="#" class="govuk-back-link">Back</a>
+      
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form action="/form-handler" method="post" novalidate>
+      
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        What is your current situation?
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="currentSituation" name="currentSituation" type="radio" value="atWork">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                          My employee is at work and has told me they have a disability or health condition
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="currentSituation-2" name="currentSituation" type="radio" value="offWork">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                          My employee has gone off work because of their disability or health condition
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="currentSituation-3" name="currentSituation" type="radio" value="returnToWork">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                          My employee is off work because of their disability or health condition, and I want to start planning their return to work
+                        </label>
+                      </div>
+                    </div>
+      
+                  </fieldset>
+                </div>
+      
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+
+<!--
+      {{ govukRadios({
+        idPrefix: "currentSituation",
+        name: "currentSituation",
+        fieldset: {
+          legend: {
+            text: "What is your current situation?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "employeeOffWorkSick~/beta/sprint-5/prototype-A/establishing/est-q1",
+            text: "My employee is off work sick",
+            checked: data['currentSituation'] === 'employeeOffWorkSick'
+          },
+          {
+            value: "employeeIllnessDisability~/beta/sprint-5/prototype-A/establishing/est-q3",
+            text: "My employee has told me they have a long-term illness or disability",
+            checked: data['currentSituation'] === 'employeeIllnessDisability'
+          },
+          {
+            value: "employeeReadyToReturn~/beta/sprint-5/prototype-A/establishing/est-q3",
+            text: "My employee is ready to return to work after a long sickness absence",
+            checked: data['currentSituation'] === 'employeeReadyToReturn'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+        -->
+    </div>
+  </div>
+
+
+{% endblock %}
