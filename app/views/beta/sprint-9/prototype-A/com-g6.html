@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Make changes to the role or workplace {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">Make changes to the role or workplace</h1>
+     
+      <p class="govuk-body-l">You will need to make 'reasonable adjustments' to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+      <p class="govuk-body">The adjustments you make will depend on your employee’s needs.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">See more examples of reasonable adjustments on the Equality and Human Rights Commission website (opens in a new tab)</a></p>
+      
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks.</p>
+
+      <p class="govuk-body">Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+      <p class="govuk-body">Over time your employee’s disability or health condition might affect them differently, get better, or get worse. You might need to make different adjustments to their role, workplace, or ways of working.</p>
+
+      
+
+      
+
+
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../return-to-work/ret-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

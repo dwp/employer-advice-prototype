@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How many employees does your company have? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="current-situation-routing">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How many employees does your company have?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-at-work-disability-or-health-condition" name="currentSituation" type="radio" value="ongoingCondition">
+                <label class="govuk-label govuk-radios__label" for="employee-at-work-disability-or-health-condition">
+                  1 to 9
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-off-work" name="currentSituation" type="radio" value="offWork">
+                <label class="govuk-label govuk-radios__label" for="employee-off-work">
+                  10 to 49
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="return-to-work" name="currentSituation" type="radio" value="returnToWork">
+                <label class="govuk-label govuk-radios__label" for="return-to-work">
+                  50 to 249
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="return-to-work" name="currentSituation" type="radio" value="returnToWork">
+                <label class="govuk-label govuk-radios__label" for="return-to-work">
+                  250+
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="return-to-work" name="currentSituation" type="radio" value="returnToWork">
+                <label class="govuk-label govuk-radios__label" for="return-to-work">
+                  I’m not sure
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
