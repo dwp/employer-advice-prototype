@@ -51,6 +51,7 @@ router.post('/prototype-A/ssp-routing', function (req, res) {
  Ben use this example
 */
 
+/* 
  router.post('/prototype-A/current-situation-routing', function (req, res) {
 
     let currentSituation = req.session.data.currentSituation;
@@ -63,9 +64,56 @@ router.post('/prototype-A/ssp-routing', function (req, res) {
         res.redirect('est-q3');
     }   
 });
+/* 
 
 /* 
  End of example
 */
+
+router.post('/prototype-A/est-q5-routing', function (req, res) {
+
+    let staQ1 = req.session.data.staQ1;
+
+    if (staQ1 == 'ongoingCondition'){
+        res.redirect('est-g4');
+    } else {
+        res.redirect('est-q3');
+    }   
+});
+
+router.post('/prototype-A/est-q3-routing', function (req, res) {
+
+    let estQ3 = req.session.data.estQ3;
+
+    if (estQ3 == 'yesToldMe'){
+        res.redirect('est-g4');
+    } else if (estQ3 == 'notToldMe') {
+        res.redirect('est-g5');
+    } else {
+        res.redirect('com-g8');
+    }   
+});
+
+router.post('/prototype-A/com-q1-routing', function (req, res) {
+
+    let comQ1 = req.session.data.comQ1;
+
+    if (comQ1 == 'yes'){
+        res.redirect('com-g1');
+    } else {
+        res.redirect('com-q2');
+    }   
+});
+
+router.post('/prototype-A/com-q2-routing', function (req, res) {
+
+    let comQ1 = req.session.data.comQ1;
+
+    if (comQ1 == 'yes'){
+        res.redirect('dis-1');
+    } else {
+        res.redirect('com-g2');
+    }   
+});
 
 module.exports = router
