@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Make changes to the role or workplace {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">Make changes to the role or workplace</h1>
+
+      <p class="govuk-body-l">You must make 'reasonable adjustments' to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+      <p class="govuk-body">The adjustments you make will depend on your employee’s needs. For example, you could provide:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a closer car parking space for someone who struggles to walk longer distances</li>
+        <li>more breaks for someone with fatigue</li>
+        <li>reduced public-facing tasks, if that environment makes someone’s mental health worse</li>
+      </ul>
+
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks.</p>
+
+      <p class="govuk-body">Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice"></a>See more examples of reasonable adjustments on the Equality and Human Rights Commission website</p>
+      <!--
+        Avoiding discrimination
+      -->
+
+      <h2 class="govuk-heading-m">Avoiding discrimination</h2>
+
+      <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you would be unlawfully discriminating against them. Your employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+      <p class="govuk-body">By law you must make reasonable adjustments if you could be expected to know that your employee is disabled. This can be difficult to be sure about, so you might decide to make adjustments for all employees with health conditions.</p>
+
+      <p class="govuk-body">What is considered ‘reasonable’ will depend on your business. For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <p class="govuk-body">If adjustments are more expensive than is reasonable for your business, your employee might be eligible for a government grant from <a href="https://www.gov.uk/access-to-work">Access to Work</a> to help with the costs.</p>
+
+      <!--
+        Occupational health support     
+      -->
+
+      <h2 class="govuk-heading-m">Occupational health support</h2>
+
+      <p class="govuk-body">If your case is difficult or you want support, many employers find it useful to hire an occupational health provider. They can assess your situation and give you practical steps to take together with your employee.</p>
+
+      <p class="govuk-body">You can find information on the <a href="https://www.acas.org.uk/using-occupational-health-at-work">ACAS website</a> about using occupational health at work. You can also find out more about occupational health and find a provider:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>at <a href="https://www.som.org.uk/work-and-health/information-employers">The Society of Occupational Medicine</a></li>
+        <li>at the <a href="https://www.seqohs.org/CMS/Page.aspx?PageId=119">Safe Effective Quality Occupational Health Service (SEQOHS)</a></li>
+        <li>at the <a href="https://cohpa.org">Commercial Occupational Health Providers’ Association (COHPA)</a></li>
+        <li>at the <a href="https://www.nhshealthatwork.co.uk">NHS Health and Work Network</a></li>
+        <li>by contacting any other provider directly</li>
+      </ul>
+
+      <br><br>
+
+      {% if (data['currentSituation'] == "ongoingCondition") %}
+          {{ govukButton({
+              text: "Continue",
+              href: "sum-2"
+          }) 
+      }}
+      
+      {% else %}
+          {{ govukButton({
+            text: "Continue",
+            href: "ret-g7"
+          }) 
+      }}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}

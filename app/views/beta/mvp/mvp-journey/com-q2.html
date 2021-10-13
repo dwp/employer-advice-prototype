@@ -1,49 +1,48 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Have you talked to your employee about their condition and any support they need? {{ data['pageTitleAddOn'] }} 
+Have you talked to your employee about any changes they need? {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form method="POST">
+      <form method="POST" action="talked-about-changes-routing">
 
       <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
-      {{ govukRadios({
-        idPrefix: "wantHelpOnWhatToSayA",
-        name: "wantHelpOnWhatToSayA",
-        value: data['wantHelpOnWhatToSayA'],
-        fieldset: {
-          legend: {
-            text: "Have you talked to your employee about their condition and any support they need?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        hint: {
-          text: "If not, you will see advice about how to discuss any changes you can make."
-        },
-        items: [
-          {
-            value: "Yes~/beta/sprint-5/prototype-A/summary/sum-3",
-            text: "Yes",
-            checked: data['wantHelpOnWhatToSayA'] === 'Yes'
-          },
-          {
-            value: "No~/beta/sprint-5/prototype-A/communicating/com-g2",
-            text: "No",
-            checked: data['wantHelpOnWhatToSayA'] === 'No'
-          }
-        ]
-      }) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Have you talked to your employee about any changes they need?
+              </h1>
+            </legend>
+            <div id="talkedAboutChanges-hint" class="govuk-hint">
+              If not, you will see advice about how you can support your employee to stay at work or return after absence.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-talked-about-changes-1" name="talkedAboutChanges" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="have-you-talked-about-changes-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-talked-about-changes-2" name="talkedAboutChanges" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="have-you-talked-about-changes-2">
+                    No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
       </form>
     </div>

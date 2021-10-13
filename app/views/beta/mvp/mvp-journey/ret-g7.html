@@ -1,7 +1,8 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Find out what your employee needs {{ data['pageTitleAddOn'] }}
+Support your employee as they return to work {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -9,70 +10,64 @@ Find out what your employee needs {{ data['pageTitleAddOn'] }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <!-- {{ govukBackLink({
-        text: "Back",
-        href: "est-q2"
-      }) }} -->
-
       <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
-      <h1 class="govuk-heading-l">Find out what your employee needs</h1>
+      <h1 class="govuk-heading-l">Support your employee as they return to work</h1>
 
-      <p class="govuk-body">You should talk to your employee about how you can help them return to work. They could be happy to return to their current job, or they might need some changes.</p>
-
-      <p class="govuk-body">You should discuss any changes you can make together. There are a few things you can think about, and no change is right for everyone.</p>
+      <p class="govuk-body-l">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
 
       <!--
-        TO DO 
-        Add conditional statements
-
-        Mental health conditions
+        Before your employee’s first day
       -->
-      
-      <h2 class="govuk-heading-m">Examples of changes for mental health conditions</h2>
 
-      <p class="govuk-body">Talk to your employee about changes like:</p>
+      <h2 class="govuk-heading-m">Before your employee’s first day</h2>
+
+      <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+      <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+
+      <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+      <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+      <!--
+        What to do in the first week   
+      -->
+
+      <h2 class="govuk-heading-m">What to do in the first week</h2>
+
+      <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+      <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+      <!--
+        Keep talking with your employee  
+      -->
+
+      <h2 class="govuk-heading-m">Keep talking with your employee</h2>
+
+      <p class="govuk-body">Have regular meetings with your employee when they are back at work, to check they have the right support.</p>
+
+      <p class="govuk-body">Ask if their disability or health condition is affecting them the same way, or getting better or worse. You might need to make different adjustments to their work or workplace.</p>
+
+      <p class="govuk-body">You might find it helpful to hire an occupational health provider to assess your situation and give you practical steps to take together with your employee. Vocational rehabilitation specialists also provide help with returning to work.</p>
+
+      <p class="govuk-body">You can find information on the <a href="https://www.acas.org.uk/using-occupational-health-at-work">ACAS website</a> about using occupational health at work. You can also find out more about occupational health and find a provider:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>having quiet areas in the office</li>
-        <li>different start times or working hours</li>
-        <li>help managing their workload</li>
+        <li>at <a href="https://www.som.org.uk/work-and-health/information-employers">The Society of Occupational Medicine</a></li>
+        <li>at the <a href="https://vrassociationuk.com">Vocational Rehabilitation Association</a></li>
+        <li>at the <a href="https://www.seqohs.org/CMS/Page.aspx?PageId=119">Safe Effective Quality Occupational Health Service (SEQOHS)</a></li>
+        <li>at the <a href="https://cohpa.org">Commercial Occupational Health Providers’ Association (COHPA)</a></li>
+        <li>at the <a href="https://www.nhshealthatwork.co.uk">NHS Health and Work Network</a></li>
+        <li>by contacting any other provider directly</li>
       </ul>
 
-      <!--
-        TO DO 
-        Add conditional statements
-        
-        Physical conditions
-      -->
-
-
-      <h2 class="govuk-heading-m">Examples of changes for physical conditions</h2>
-
-      <p class="govuk-body">Discuss possible changes like:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>providing wheelchair access</li>
-        <li>giving them a parking space near to work</li>
-        <li>software for people with visual impairments</li>
-      </ul>
-
-      <!--
-        More help with employee’s return
-      -->
-      <h2 class="govuk-heading-m">More help with employee’s return</h2>
-
-      <p class="govuk-body">The <a href="https://www.gov.uk/access-to-work">Access to Work</a> scheme can help your employee with the costs of some changes. It can also provide a workplace assessment to decide which changes are needed.</p>
-
-      <p class="govuk-body">An occupational health expert can be useful if the case is complex or you're not sure what to do. ACAS has information on <a href="https://www.acas.org.uk/using-occupational-health-at-work">using occupational health at work</a>.</p>
-
-      <p class="govuk-body">There is more information about <a href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">using occupational health at work</a>on the ACAS website.</p>
-      
-      <br>
+      <br><br>
 
       {{ govukButton({
         text: "Continue",
-        href: "../summary/sum-1"
+        href: "sum-2"
       }) }}
       
     </div>
