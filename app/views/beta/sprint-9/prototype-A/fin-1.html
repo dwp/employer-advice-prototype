@@ -19,10 +19,21 @@ Tell your employee about possible financial support {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
-      {{ govukButton({
-        text: "Continue",
-        href: "../return-to-work/ret-q1"
-      }) }}
+      {% if (data['adjQ3'] == "yes") %}   
+        {{ govukButton({
+            text: "Continue",
+            href: "adj-q4"
+        }) 
+      }}
+
+      {% else %}    
+        {{ govukButton({
+            text: "Continue",
+           href: "adj-g5"
+       }) 
+      }}
+
+     {% endif %}
       
     </div>
   </div>

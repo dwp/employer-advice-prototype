@@ -60,10 +60,21 @@ Get help from occupational health {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
+    {% if (data['staQ1'] == "ongoingCondition") %}   
       {{ govukButton({
-        text: "Continue",
-        href: "../return-to-work/ret-q1"
-      }) }}
+          text: "Continue",
+          href: "adj-g10"
+      }) 
+    }}
+
+    {% else %}    
+      {{ govukButton({
+          text: "Continue",
+          href: "ret-g7"
+      }) 
+    }}
+
+    {% endif %}
       
     </div>
   </div>

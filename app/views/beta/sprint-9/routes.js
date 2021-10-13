@@ -107,12 +107,62 @@ router.post('/prototype-A/com-q1-routing', function (req, res) {
 
 router.post('/prototype-A/com-q2-routing', function (req, res) {
 
-    let comQ1 = req.session.data.comQ1;
+    let comQ2 = req.session.data.comQ2;
 
-    if (comQ1 == 'yes'){
+    if (comQ2 == 'yes'){
         res.redirect('dis-1');
     } else {
         res.redirect('com-g2');
+    }   
+});
+
+router.post('/prototype-A/adj-q2-routing', function (req, res) {
+
+    let adjQ2 = req.session.data.adjQ2;
+    let staQ1 = req.session.data.staQ1;
+
+    if (staQ1 == 'ongoingCondition' && adjQ2 == 'yes'){
+        res.redirect('adj-g10');
+    } else if (adjQ2 == 'no') {
+        res.redirect('adj-q3');
+    } else if (adjQ2 == 'notSure') {
+        res.redirect('adj-g7');
+    } else {
+        res.redirect('ret-g7');
+    }   
+});
+
+
+router.post('/prototype-A/est-q4-routing', function (req, res) {
+
+    let staQ1 = req.session.data.staQ1;
+
+    if (staQ1 == 'offWork'){
+        res.redirect('com-q1');
+    } else {
+        res.redirect('com-q2');
+    }   
+});
+
+router.post('/prototype-A/adj-q3-routing', function (req, res) {
+
+    let adjQ3 = req.session.data.adjQ3;
+
+    if (adjQ3 == 'yes'){
+        res.redirect('fin-1');
+    } else {
+        res.redirect('adj-g5');
+    }   
+});
+
+router.post('/prototype-A/adj-q4-routing', function (req, res) {
+
+    let adjQ4 = req.session.data.adjQ4;
+
+    if (adjQ4 == 'yes'){
+        res.redirect('adj-g5');
+    } else {
+        res.redirect('adj-g10');
     }   
 });
 

@@ -39,10 +39,21 @@ Avoid discrimination {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
+    {% if (data['comQ2'] == "no") %}   
       {{ govukButton({
-        text: "Continue",
-        href: "../return-to-work/ret-q1"
-      }) }}
+          text: "Continue",
+          href: "fin-1"
+      }) 
+    }}
+
+    {% else %}    
+      {{ govukButton({
+          text: "Continue",
+          href: "adj-q2"
+      }) 
+    }}
+
+    {% endif %}
       
     </div>
   </div>
