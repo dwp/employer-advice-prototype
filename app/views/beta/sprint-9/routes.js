@@ -158,11 +158,14 @@ router.post('/prototype-A/adj-q3-routing', function (req, res) {
 router.post('/prototype-A/adj-q4-routing', function (req, res) {
 
     let adjQ4 = req.session.data.adjQ4;
+    let staQ1 = req.session.data.staQ1;
 
     if (adjQ4 == 'yes'){
         res.redirect('adj-g5');
+    } else if (staQ1 == 'ongoingCondition' && adjQ4 == 'no'){
+            res.redirect('adj-g10');
     } else {
-        res.redirect('adj-g10');
+        res.redirect('ret-g7');
     }   
 });
 
