@@ -15,7 +15,9 @@ Save and print {{ data['pageTitleAddOn'] }}
 
         <p class="govuk-body">There are no more questions.</p>
 
-        <p class="govuk-body">You may find it useful to <a href="javascript:window.print()">save and print the guidance information you’ve seen</a>.</p>
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body">You may find it useful to <a href="#" onclick="frames['sum-4'].print()">save and print the guidance information you’ve seen</a>.</p>
 
         <p class="govuk-body">The answers you gave have not been recorded. If you leave this page you will need to answer the questions again to see the guidance information.</p>
 
@@ -26,9 +28,11 @@ Save and print {{ data['pageTitleAddOn'] }}
         <h2 class="govuk-heading-m">Save and print</h2>
 
 
-        <p class="govuk-body">‘Support and manage disabled employees and employees with health conditions at work’ is a new service. Your <a href="javascript:window.print()">feedback</a> will help us to improve it.</p>
+        <p class="govuk-body">‘Support and manage disabled employees and employees with health conditions at work’ is a new service. Your <a href="#">feedback</a> will help us to improve it.</p>
         
     </div>
   </div>
 
 {% endblock %}
+
+
