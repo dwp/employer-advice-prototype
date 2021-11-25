@@ -43,21 +43,10 @@ Avoid discrimination {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
-    {% if (data['comQ2'] == "no") %}   
       {{ govukButton({
-          text: "Continue",
-          href: "fin-1"
-      }) 
-    }}
-
-    {% else %}    
-      {{ govukButton({
-          text: "Continue",
-          href: "adj-q2"
-      }) 
-    }}
-
-    {% endif %}
+        text: "Continue",
+        href: "dis-g2"
+      }) }}
       
     </div>
   </div>

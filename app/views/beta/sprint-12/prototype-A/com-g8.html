@@ -21,31 +21,11 @@ Ask about your employee’s disability or health condition {{ data['pageTitleAdd
       
       <br>
 
-<!-- red -->
-   {% if (data['staQ1'] == "offWork") %}   
       {{ govukButton({
         text: "Continue",
-        href: "est-q1"
-      }) 
-    }}
-
-<!-- blue -->
-    {% elseif (data['staQ1'] == "ongoingCondition") %}    
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-
-<!-- green -->
-    {% else %}   
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-      
-    {% endif %}
+        href: "est-q6"
+        }) 
+      }}
       
     </div>
   </div>

@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is your employee off work because of a disability or health condition? {{ data['pageTitleAddOn'] }}
+  Has your employee been off work for more than a week? {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form method="POST" action="sta-q2-routing">
+      <form method="POST" action="est-q6-routing">
 
       <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
@@ -16,20 +16,23 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
-                Is your employee off work because of a disability or health condition?
+                Has your employee been off work for more than a week?
               </h1>
             </legend>
+            <div id="changed-name-hint" class="govuk-hint">
+              Include non-working days, such as weekends.
+            </div>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="employee-off-work" name="staQ2" type="radio" value="offWork">
-                <label class="govuk-label govuk-radios__label" for="employee-off-work">
-                  Yes, they’re off work
+                <input class="govuk-radios__input" id="employee-off-more-than-week" name="estQ6" type="radio" value="offMoreThanWeek">
+                <label class="govuk-label govuk-radios__label" for="employee-off-more-than-week">
+                  Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="employee-still-working" name="staQ2" type="radio" value="stillWorking">
-                <label class="govuk-label govuk-radios__label" for="eemployee-still-working">
-                  No, they’re still working
+                <input class="govuk-radios__input" id="employee-less-more-than-week" name="estQ6" type="radio" value="offLessThanWeek">
+                <label class="govuk-label govuk-radios__label" for="employee-less-more-than-week">
+                  No
                 </label>
               </div>
             </div>

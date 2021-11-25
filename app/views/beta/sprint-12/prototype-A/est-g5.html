@@ -21,42 +21,19 @@ What to do if your employee does not want to tell you about their disability or 
 
       <h2 class="govuk-heading-l">When you can ask for medical evidence</h2>
 
-      <p class="govuk-body">If your employee is off work due to a disability or health condition for 8 or more days you can ask for medical evidence. Examples of medical evidence are a letter from a hospital, or a fit note from a doctor. Fit notes used to be called sick notes.</p>
+      <p class="govuk-body">If your employee is off work due to a disability or health condition for 8 or more days you can ask for medical evidence. Examples of medical evidence are a letter from a hospital, or a <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">fit note from a doctor (opens in a new tab)</a>. Fit notes used to be called sick notes.</p>
 
       <p class="govuk-body">A fit note will usually include a brief summary of the disability or health condition, and the medical professional’s recommendation about the employee’s ability to work.</p>
 
-      <p class="govuk-body">If your employee does not give you medical evidence after 8 days’ absence you do not have to pay Statutory Sick Pay.</p>
-
-      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">Find out more about fit notes (opens in a new tab)</a></p>
-
+      <p class="govuk-body">If your employee does not give you medical evidence after 8 days’ absence you do not have to pay <a href="https://www.gov.uk/statutory-sick-pay" target="_blank">Statutory Sick Pay (opens in a new tab)</a>.</p>
       
       <br>
 
-<!-- red -->
-   {% if (data['staQ1'] == "offWork") %}   
       {{ govukButton({
         text: "Continue",
-        href: "est-q1"
-      }) 
-    }}
-
-<!-- blue -->
-    {% elseif (data['staQ1'] == "ongoingCondition") %}    
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-
-<!-- green -->
-    {% else %}  
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-      
-    {% endif %}
+        href: "est-q6"
+        }) 
+      }}
       
     </div>
   </div>

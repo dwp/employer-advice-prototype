@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You can choose to make changes for your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">You can choose to make changes for your employee</h1>
+     
+      <p class="govuk-body-l">Placeholder</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

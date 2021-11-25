@@ -8,6 +8,7 @@ Get help from occupational health {{ data['pageTitleAddOn'] }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-g5-routing">
 
       <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
@@ -64,22 +65,11 @@ Get help from occupational health {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
-    {% if (data['staQ1'] == "ongoingCondition") %}   
       {{ govukButton({
-          text: "Continue",
-          href: "adj-g10"
-      }) 
-    }}
+        text: "Continue"
+      }) }}
 
-    {% else %}    
-      {{ govukButton({
-          text: "Continue",
-          href: "ret-g7"
-      }) 
-    }}
-
-    {% endif %}
-      
+    </form>
     </div>
   </div>
 

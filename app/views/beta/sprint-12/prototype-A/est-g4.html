@@ -13,9 +13,9 @@ Learn more about your employee’s disability or health condition {{ data['pageT
 
       <h1 class="govuk-heading-xl">Learn more about your employee’s disability or health condition</h1>
 
-      <p class="govuk-body-l">You do not need to know the details of your employee’s disability or health condition before you talk to them. However, knowing more can help you prepare for your conversation.</p>
+      <p class="govuk-body-l">Some employers find it helpful to find out more about their employee’s disability or health condition.</p>
       
-      <p class="govuk-body">You should be ready to listen to your employee and not make assumptions. You do not need to be an expert in their disability or health condition.</p>
+      <p class="govuk-body">Do not make assumptions about your employee’s abilities when you learn about your employee's disability or health condition. It’s important to talk to your employee about what they feel able to do at work.</p>
 
       <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in a new tab)</a> has details of many conditions and the most common symptoms. Many of the health conditions listed on the NHS website also have links to support organisations for that condition.</p>
       
@@ -23,7 +23,7 @@ Learn more about your employee’s disability or health condition {{ data['pageT
 
       <p class="govuk-body">Physical conditions can also affect mental health. They can cause stress, anxiety and affect everyday life.</p>
 
-      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mind Mental Health at Work (opens in a new tab)</a> website is a collection of work-related guides from mental health experts.</p>
+      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in a new tab)</a> website is a collection of work-related guides from mental health experts.</p>
 
       <h2 class="govuk-heading-l">If your employee is disabled or has a long-term health condition</h2>
 
@@ -35,31 +35,11 @@ Learn more about your employee’s disability or health condition {{ data['pageT
 
       <br>
 
-<!-- red -->
-   {% if (data['staQ1'] == "offWork") %}   
       {{ govukButton({
         text: "Continue",
-        href: "est-q1"
-      }) 
-    }}
-
-<!-- blue -->
-    {% elseif (data['staQ1'] == "ongoingCondition") %}    
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-
-<!-- green -->
-    {% else %}    
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q4"
-      }) 
-    }}
-      
-    {% endif %}
+        href: "est-q6"
+        }) 
+      }}
 
     </div>
   </div>
