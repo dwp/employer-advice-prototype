@@ -18,6 +18,10 @@ You must Statutory Sick Pay if your employee is eligible {{ data['pageTitleAddOn
         Else (If EST-Q1 )
       -->
 
+      
+      
+
+
       <!--
           If employee is off for 4,5,6, or 7 days display content for EST-G2
       -->
@@ -39,7 +43,8 @@ You must Statutory Sick Pay if your employee is eligible {{ data['pageTitleAddOn
 
       {% else %}
 
-        <p class="govuk-body">Your employee went off work on .
+
+        <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
           This means your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
         
         <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim SSP from the government.</p>

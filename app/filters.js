@@ -99,6 +99,50 @@ module.exports = function (env) {
   // }
 
 
+  
+
+
+  // {{ 'Paul' | sayHi }} => 'Hi Paul'
+
+  // filters.sayHi = function(name) {
+  //   return 'Hi ' + name + '!'
+  // }
+
+  filters.formatMonth = (employeeLeaveDateMonthA) =>{
+
+    if (employeeLeaveDateMonthA == '1' || employeeLeaveDateMonthA == '01') {
+      return 'January'
+    } else if (employeeLeaveDateMonthA == '2' || employeeLeaveDateMonthA == '02') {
+      return 'February'
+    } else if (employeeLeaveDateMonthA == '3' || employeeLeaveDateMonthA == '03') {
+      return 'March'
+    } else if (employeeLeaveDateMonthA == '4' || employeeLeaveDateMonthA == '04') {
+      return 'April'
+    } else if (employeeLeaveDateMonthA == '5' || employeeLeaveDateMonthA == '05') {
+      return 'May'
+    } else if (employeeLeaveDateMonthA == '6' || employeeLeaveDateMonthA == '06') {
+      return 'June'
+    } else if (employeeLeaveDateMonthA == '7' || employeeLeaveDateMonthA == '07') {
+      return 'July'
+    } else if (employeeLeaveDateMonthA == '8' || employeeLeaveDateMonthA == '08') {
+      return 'August'
+    } else if (employeeLeaveDateMonthA == '9' || employeeLeaveDateMonthA == '09') {
+      return 'September'
+    } else if (employeeLeaveDateMonthA == '10') {
+      return 'October'
+    } else if (employeeLeaveDateMonthA == '11') {
+      return 'November'
+    } else if (employeeLeaveDateMonthA == '12') {
+      return 'December'
+    } else {
+      return false
+    }
+
+  }
+
+
+
+
 
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
