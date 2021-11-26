@@ -35,11 +35,19 @@ Learn more about your employee’s disability or health condition {{ data['pageT
 
       <br>
 
-      {{ govukButton({
-        text: "Continue",
-        href: "est-q6"
-        }) 
-      }}
+      {% if data['staQ2'] == 'stillWorking' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "rea-g1"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "est-q6"
+          }) 
+        }}
+      {% endif %}
 
     </div>
   </div>
