@@ -93,7 +93,7 @@ router.post('/prototype-A/est-q6-routing', function (req, res) {
     
     let estQ6 = req.session.data.estQ6;
 
-    if (estQ6 == 'offMoreThanWeek'){
+    if (estQ6 == 'yes'){
         res.redirect('est-g2&3');
     } else {
         res.redirect('est-q1');
@@ -149,18 +149,27 @@ router.post('/prototype-A/com-q2-routing', function (req, res) {
 router.post('/prototype-A/adj-q2-routing', function (req, res) {
 
     let adjQ2 = req.session.data.adjQ2;
-    let daysEmployeeOffSick = req.session.data.daysEmployeeOffSick;
+    let estQ6 = req.session.data.estQ6;
+    let staQ2 = req.session.data.staQ2;
 
-    if (adjQ2 == 'yes' && daysEmployeeOffSick < '8'){
+    if (adjQ2 == 'yes' && estQ6 == 'no' || adjQ2 == 'yes' && staQ2 == 'stillWorking'){
         res.redirect('adj-g10');
-    } else if (adjQ2 == 'yes' && daysEmployeeOffSick >= '8'){
+    }
+    else if (adjQ2 == 'yes' && estQ6 == 'yes'){
         res.redirect('ret-g7');
     } else {
         res.redirect('adj-q3');
     }  
 
-});
+    // if (adjQ2 == 'yes' && estQ6 == 'no'){
+    //     res.redirect('adj-g10');
+    // } else if (adjQ2 == 'yes' && estQ6 == 'yes'){
+    //     res.redirect('ret-g7');
+    // } else {
+    //     res.redirect('adj-q3');
+    // }  
 
+});
 
 router.post('/prototype-A/est-q4-routing', function (req, res) {
 
@@ -202,11 +211,11 @@ router.post('/prototype-A/adj-g5-routing', function (req, res) {
 
     let adjQ2 = req.session.data.adjQ2;
     let staQ2 = req.session.data.staQ2;
-    let daysEmployeeOffSick = req.session.data.daysEmployeeOffSick;  
+    let estQ6 = req.session.data.estQ6;  
 
-    if (daysEmployeeOffSick >= '8'){
+    if (estQ6 == 'yes'){
         res.redirect('ret-g7');
-    } else if (daysEmployeeOffSick < '8' ){
+    } else if (estQ6 == 'no' ){
         res.redirect('adj-g10');
     } else if (staQ2 == 'offWork' && adjQ2 == 'no'){
         res.redirect('dis-g2');
