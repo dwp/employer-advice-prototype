@@ -150,6 +150,7 @@ router.post('/prototype-A/adj-q2-routing', function (req, res) {
 
     let adjQ2 = req.session.data.adjQ2;
     let estQ6 = req.session.data.estQ6;
+    let staQ2 = req.session.data.staQ2;
 
     if (adjQ2 == 'yes' && estQ6 == 'no' || adjQ2 == 'yes' && staQ2 == 'stillWorking'){
         res.redirect('adj-g10');
