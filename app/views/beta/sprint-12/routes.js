@@ -201,7 +201,7 @@ router.post('/prototype-A/adj-q4-routing', function (req, res) {
     if (staQ2 == 'offWork' && adjQ2 == 'no'){
         res.redirect('dis-g2');
     } else if (staQ2 == 'stillWorking' && adjQ2 == 'no'){
-            res.redirect('dis-g1');
+        res.redirect('dis-g1');
     } else {
         res.redirect('adj-g5');
     }   
