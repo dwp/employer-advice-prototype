@@ -135,7 +135,7 @@ module.exports = function (env) {
     } else if (employeeLeaveDateMonthA == '12') {
       return 'December'
     } else {
-      return false
+      return ''
     }
 
   }
