@@ -197,10 +197,11 @@ router.post('/prototype-A/adj-q4-routing', function (req, res) {
 
     let adjQ2 = req.session.data.adjQ2;
     let staQ2 = req.session.data.staQ2;
+    let adjQ4 = req.session.data.adjQ4;
 
-    if (staQ2 == 'offWork' && adjQ2 == 'no'){
+    if (staQ2 == 'offWork' && adjQ2 == 'no' && adjQ4 == 'no') {
         res.redirect('dis-g2');
-    } else if (staQ2 == 'stillWorking' && adjQ2 == 'no'){
+    } else if (staQ2 == 'stillWorking' && adjQ2 == 'no' && adjQ4 == 'no') {
         res.redirect('dis-g1');
     } else {
         res.redirect('adj-g5');
