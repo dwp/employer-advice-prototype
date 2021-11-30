@@ -75,6 +75,22 @@ Summary of what you should do {{ data['pageTitleAddOn'] }}
 
         {% if data['estQ6'] == 'yes' %}
         <!-- Start of EST-G3 summary content -->
+
+        <h1 class="govuk-heading-l">You must Statutory Sick Pay if your employee is eligible</h1>
+
+        <p class="govuk-body">Because your employee has been off work for 8 days or more, you must pay Statutory Sick Pay (SSP) if your employee is eligible.</p>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim SSP from the government.</p>
+
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+        <p class="govuk-body">You can choose to ask for medical evidence of your employee’s disability or health condition before you pay SSP. Examples of medical evidence are a letter from a hospital, or a fit note. Fit notes used to be called sick notes.</p>
+        <!-- End of EST-G3 summary content -->
+        {% endif %}
+
+        {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+        <!-- Start of EST-G2 summary content -->
+
         <h1 class="govuk-heading-l">You must Statutory Sick Pay if your employee is eligible</h1>
 
         <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
@@ -85,22 +101,12 @@ Summary of what you should do {{ data['pageTitleAddOn'] }}
         <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
 
         <p class="govuk-body">You should not ask your employee to provide proof of their disability or health condition from a medical professional. If your employee is off work for 8 or more days you can choose to ask for proof before you pay SSP.</p>
-        <!-- End of EST-G3 summary content -->
+    
+
+        <!-- End of EST-G2 summary content -->
         {% endif %}
 
-        {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
-        <!-- Start of EST-G2 summary content -->
-        <h1 class="govuk-heading-l">You must Statutory Sick Pay if your employee is eligible</h1>
-
-        <p class="govuk-body">Because your employee has been off work for 8 days or more, you must pay Statutory Sick Pay (SSP) if your employee is eligible.</p>
-
-        <p class="govuk-body"><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim SSP from the government.</p>
-
-        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
-
-        <p class="govuk-body">You can choose to ask for medical evidence of your employee’s disability or health condition before you pay SSP. Examples of medical evidence are a letter from a hospital, or a fit note. Fit notes used to be called sick notes.</p>
-        <!-- End of EST-G2 summary content -->
-        {% else %}
+        {% if (data['daysEmployeeOffSick'] >= '1') and (data['daysEmployeeOffSick'] <= '3') %}
         <!-- Start of EST-G1 summary content -->
         <h1 class="govuk-heading-l">You do not need to pay Statutory Sick Pay yet</h1>
 
