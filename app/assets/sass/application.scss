@@ -16,6 +16,98 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+.gem-c-pagination {
+  display: block;
+  margin: 50px 0;
+}
+.gem-c-pagination__list {
+  margin: 0;
+  padding: 0;
+}
+.gem-c-pagination__item:first-child {
+  margin-bottom: 20px;
+}
+.gem-c-pagination__item {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  list-style: none;
+}
+.gem-c-pagination__link {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+.gem-c-pagination__link-title {
+  display: block;
+  border-top: 1px solid #b1b4b6;
+  padding-top: 15px;
+}
+.gem-c-pagination__link-icon {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.25;
+  display: inline-block;
+  margin-bottom: 1px;
+  height: 0.482em;
+  width: 0.63em;
+  fill: #505a5f;
+}
+.gem-c-pagination__link-text {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-left: 10px;
+}
+.gem-c-pagination__link-divider {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+.gem-c-pagination__link-label {
+  display: inline-block;
+  margin-top: 0.1em;
+  margin-left: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+}
+@media (min-width: 40.0625em) {
+.gem-c-pagination__item {
+  font-size: 19px;
+  line-height: 1.3157894737;
+}
+.gem-c-pagination__link-icon {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.gem-c-pagination__link-text {
+  font-size: 19px;
+  line-height: 1.3157894737;
+}
+.gem-c-pagination__link-label {
+  margin-left: 30px;
+}
+
+}
+
 //Changed from govuk-button to govuk-button-unbranded when team switched from unbranded to gov uk branded prototype. Due to same names green 'start now' buttons were being overridden. 
 .govuk-button_unbranded {
     background-color: #000;
