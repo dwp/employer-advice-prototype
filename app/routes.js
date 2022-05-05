@@ -30,6 +30,8 @@ router.use('/beta/sprint-10', require('./views/beta/sprint-10/routes'));
 
 router.use('/beta/sprint-12', require('./views/beta/sprint-12/routes'));
 
+router.use('/beta/sprint-21', require('./views/beta/sprint-21/routes'));
+
 
 // router.use('/beta/sprint-:routeVersion', (req, res, next) => {
 //   var routeVersion = req.params.routeVersion

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Learn more about your employee’s disability or health condition {{ data['pageTitleAddOn'] }}
+Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -11,43 +11,45 @@ Learn more about your employee’s disability or health condition {{ data['pageT
 
       <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
-      <h1 class="govuk-heading-xl">Learn more about your employee’s disability or health condition</h1>
+      <h1 class="govuk-heading-xl">Prepare for a conversation with your employee</h1>
 
-      <p class="govuk-body-l">Some employers find it helpful to find out more about their employee’s disability or health condition.</p>
+      <p class="govuk-body-l">You do not need to know the details of your employee's condition before you talk to them about support. But learning more can help you prepare for the conversation.</p>
+
+      <h2 class="govuk-heading-l">Listen to your employee</h2>
       
-      <p class="govuk-body">Do not make assumptions about your employee’s abilities when you learn about your employee's disability or health condition. It’s important to talk to your employee about what they feel able to do at work.</p>
+      <p class="govuk-body">It's very important to listen to your employee and not make assumptions. Everyone has a different experience of any health condition or disability.</p>
 
-      <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in a new tab)</a> has details of many conditions and the most common symptoms. Many of the health conditions listed on the NHS website also have links to support organisations for that condition.</p>
-      
-      <h2 class="govuk-heading-l">Consider mental health</h2>
+      <p class="govuk-body">However, many people appreciate it if you learn a little about their condition. This shows that you want to support them. Remember that they are still the expert on their own situation.</p>
 
-      <p class="govuk-body">Physical conditions can also affect mental health. They can cause stress, anxiety and affect everyday life.</p>
+      <h2 class="govuk-heading-l">Mental health</h2>
 
-      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in a new tab)</a> website is a collection of work-related guides from mental health experts.</p>
+      <p class="govuk-body">People with mental health conditions can feel their condition is less understood than more visible physical conditions. It's important not to trivialise things like depression and anxiety. Take time to learn from and listen to your employee.</p>
 
-      <h2 class="govuk-heading-l">If your employee is disabled or has a long-term health condition</h2>
+      <p class="govuk-body">Physical conditions can also affect mental health.</p>
 
-      <p class="govuk-body">You must not discriminate unlawfully on the grounds of a health condition or disability. When you agree next steps with your employee, keep in mind that the law requires you to make reasonable adjustments in some cases.</p>
+      <p class="govuk-body">Long-term conditions like depression can affect people very differently over time. Your employee is likely to have good and bad days, with different needs for each.</p>
 
-      <p class="govuk-body">You should seek advice if you and your employee are not sure if this disability law applies in your situation.</p>
+      <p class="govuk-body"><a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in new tab)</a> is a collection of work-related guides from mental health experts.</p>
 
-      <p class="govuk-body">ACAS has <a href="https://www.acas.org.uk/disability-discrimination/what-disability-means" target="_blank">advice on what disability means (opens in a new tab)</a>.</p>
+      <h2 class="govuk-heading-l">Disabilities and common conditions</h2>
+
+      <p class="govuk-body">These websites can help you to learn more about your employee's condition.</p>
+
+
+      <p class="govuk-body">The <a href="https://www.gov.uk/government/publications/disability-confident-and-cipd-guide-for-line-managers-on-employing-people-with-a-disability-or-health-condition" target="_blank">Employing disabled people and people with health conditions (opens in new tab)</a> for line managers (opens in new tab) covers recruiting, managing and developing people with a disability or long-term condition.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/employing-disabled-people-and-people-with-health-conditions/employing-disabled-people-and-people-with-health-conditions" target="_blank">Disability Confident and CIPD guide (opens in new tab)</a> includes advice on specific conditions.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in a new tab)</a> has details of many conditions and the most common symptoms.</p>
+
 
       <br>
 
-      {% if data['staQ2'] == 'stillWorking' %}
-        {{ govukButton({
-          text: "Continue",
-          href: "rea-g1"
-          }) 
-        }}
-      {% else %}
-        {{ govukButton({
-          text: "Continue",
-          href: "est-q6"
-          }) 
-        }}
-      {% endif %}
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q3"
+        }) 
+      }}
 
     </div>
   </div>
