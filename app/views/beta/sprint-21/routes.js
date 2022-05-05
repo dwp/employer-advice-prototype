@@ -62,7 +62,13 @@ router.post('/prototype-A/ssp-routing', function (req, res) {
 */
 
 router.post('/prototype-A/sta-q2-routing', function (req, res) {
-    res.redirect('est-q5');
+    let staQ2 = req.session.data.staQ2;
+
+    if (staQ2 == 'yesWorking'){
+        res.redirect('est-q3');
+    } else {
+        res.redirect('est-q1');
+    }   
 });
 
 router.post('/prototype-A/est-q5-routing', function (req, res) {
@@ -79,13 +85,18 @@ router.post('/prototype-A/est-q5-routing', function (req, res) {
 router.post('/prototype-A/est-q3-routing', function (req, res) {
 
     let estQ3 = req.session.data.estQ3;
+    let staQ2 = req.session.data.staQ2;
 
-    if (estQ3 == 'yesToldMe'){
-        res.redirect('est-g4');
-    } else if (estQ3 == 'notToldMe') {
+    if (staQ2 == 'yesWorking' && estQ3 == 'notToldMe') {
+        res.redirect('est-g6');
+    } else if (staQ2 == 'noOffWork' && estQ3 == 'notToldMe') {
         res.redirect('est-g5');
+    } else if (staQ2 == 'yesWorking' && estQ3 == 'notAsked') {
+        res.redirect('com-g9');
+    } else if (staQ2 == 'noOffWork' && estQ3 == 'notAsked') {
+        res.redirect('est-g8');
     } else {
-        res.redirect('com-g8');
+        res.redirect('est-g4');
     }   
 });
 
@@ -131,7 +142,18 @@ router.post('/prototype-A/com-q1-routing', function (req, res) {
     if (comQ1 == 'yes'){
         res.redirect('com-g1');
     } else {
-        res.redirect('rea-g1');
+        res.redirect('est-q3');
+    }   
+});
+
+router.post('/prototype-A/com-q3-routing', function (req, res) {
+
+    let comQ3 = req.session.data.comQ3;
+
+    if (comQ3 == 'yes'){
+        res.redirect('com-g3');
+    } else {
+        res.redirect('com-q2');
     }   
 });
 
@@ -152,7 +174,7 @@ router.post('/prototype-A/adj-q2-routing', function (req, res) {
     let estQ6 = req.session.data.estQ6;
     let staQ2 = req.session.data.staQ2;
 
-    if (adjQ2 == 'yes' && estQ6 == 'no' || adjQ2 == 'yes' && staQ2 == 'stillWorking'){
+    if (adjQ2 == 'yes' && estQ6 == 'no' || adjQ2 == 'yes' && staQ2 == 'yesWorking'){
         res.redirect('adj-g10');
     }
     else if (adjQ2 == 'yes' && estQ6 == 'yes'){
@@ -173,9 +195,9 @@ router.post('/prototype-A/adj-q2-routing', function (req, res) {
 
 router.post('/prototype-A/est-q4-routing', function (req, res) {
 
-    let staQ1 = req.session.data.staQ1;
+    let staQ2 = req.session.data.staQ2;
 
-    if (staQ1 == 'offWork'){
+    if (staQ2 == 'noOffWork'){
         res.redirect('com-q1');
     } else {
         res.redirect('com-q2');
@@ -218,9 +240,9 @@ router.post('/prototype-A/adj-g5-routing', function (req, res) {
         res.redirect('ret-g7');
     } else if (estQ6 == 'no' ){
         res.redirect('adj-g10');
-    } else if (staQ2 == 'offWork' && adjQ2 == 'no'){
+    } else if (staQ2 == 'noOffWork' && adjQ2 == 'no'){
         res.redirect('dis-g2');
-    } else if (staQ2 == 'stillWorking' && adjQ2 == 'no'){
+    } else if (staQ2 == 'yesWorking' && adjQ2 == 'no'){
         res.redirect('dis-g1');
     } else {
         res.redirect('adj-g10');
