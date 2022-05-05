@@ -1,28 +1,27 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Get help from occupational health {{ data['pageTitleAddOn'] }}
+Consider occupational health support {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form method="POST" action="adj-g5-routing">
 
       <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 
       <!-- Start of ADJ-G5 summary content -->
 
-      <h1 class="govuk-heading-xl">Get help from occupational health</h1>
+      <h1 class="govuk-heading-xl">Consider occupational health support</h1>
      
-      <p class="govuk-body-l">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+      <p class="govuk-body-l">Occupational health professionals can help you to manage health and wellbeing at work.</p>
 
       <!--
         What they do
       -->
       
-      <h2 class="govuk-heading-l">What they do</h2>
+      <h2 class="govuk-heading-l">How they can help</h2>
 
       <p class="govuk-body">Occupational health experts can help with employee health by:</p>
 
@@ -40,9 +39,9 @@ Get help from occupational health {{ data['pageTitleAddOn'] }}
         <li>helping you to create policies for your business</li>
       </ul>
 
-      <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+      <p class="govuk-body">These services are paid for, but can save you time and money by helping your employees to stay healthy and productive. Occupational health teams include people like doctors, nurses, counsellors and assessors.</p>
 
-      <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+      <p class="govuk-body">There is more about <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">using occupational health services at Acas (the Advisory, Conciliation and Arbitration service - opens in new tab)</a></p>
 
       <!--
         Finding occupational health services
@@ -50,26 +49,26 @@ Get help from occupational health {{ data['pageTitleAddOn'] }}
       
       <h2 class="govuk-heading-l">Finding occupational health services</h2>
 
-      <p class="govuk-body">The following links open in a new tab.</p>
+      <p class="govuk-body">Organisations who can direct you to services include:</p>
 
-      <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
-      <a href="https://cohpa.org/find-a-oh-provider/" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
-      </p>
+      <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine (opens in new tab)</a>  who have a tool to help you find a local provider. </p>
 
+      <a href="https://cohpa.org/find-a-oh-provider/" target="_blank">The Commercial Occupational Health Providers’ Association (opens in new tab)</a>, who have a contact form for local providers</p>
        
-      <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+      <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (opens in new tab)</a>, who have a list of services which meet their quality standards</p>
 
-      <p class="govuk-body">The <a href="https://www.nhshealthatwork.co.uk/support-for-business.asp" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+      <p class="govuk-body">The <a href="https://www.nhshealthatwork.co.uk/support-for-business.asp" target="_blank">NHS Health and Work Network (opens in new tab)</a>, who have a map of local NHS providers</p>
 
       <!-- End of ADJ-G5 summary content -->
 
       <br><br>
 
       {{ govukButton({
-        text: "Continue"
-      }) }}
-
-    </form>
+        text: "Continue",
+        href: "adj-g10"
+        }) 
+      }}
+      
     </div>
   </div>
 

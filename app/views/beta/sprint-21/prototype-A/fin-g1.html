@@ -23,19 +23,11 @@ Tell your employee about possible financial support {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
-      {% if (data['adjQ2'] == "notSure") %}   
-        {{ govukButton({
-            text: "Continue",
-            href: "adj-g5"
-          }) 
-        }}
-      {% else %}    
-        {{ govukButton({
-            text: "Continue",
-           href: "adj-q4"
-          }) 
-        }}
-     {% endif %}
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g5"
+        }) 
+      }}
       
     </div>
   </div>
