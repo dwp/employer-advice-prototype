@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Are you able to make the changes your employee needs? {{ data['pageTitleAddOn'] }}
+  Are you likely to be able to make the changes your employee needs? {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -16,9 +16,12 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
-                Are you able to make the changes your employee needs?
+                Are you likely to be able to make the changes your employee needs?
               </h1>
             </legend>
+            <p class="govuk-body">
+              If you are not directly responsible for changes in your company, try to answer on behalf of the business as a whole.
+            </p>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="able-to-make-changes-1" name="adjQ2" type="radio" value="yes">
