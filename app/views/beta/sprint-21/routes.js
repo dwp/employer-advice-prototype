@@ -162,7 +162,7 @@ router.post('/prototype-A/com-q2-routing', function (req, res) {
     let comQ2 = req.session.data.comQ2;
 
     if (comQ2 == 'yes'){
-        res.redirect('adj-q2');
+        res.redirect('rea-checklist');
     } else {
         res.redirect('com-g2');
     }   
