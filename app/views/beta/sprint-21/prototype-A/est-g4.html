@@ -45,11 +45,19 @@ Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
 
       <br>
 
-      {{ govukButton({
-        text: "Continue",
-        href: "com-q3"
-        }) 
-      }}
+      {% if data['staQ2'] == 'noOffWork' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-q2"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-q3"
+          }) 
+        }}
+      {% endif %}
 
     </div>
   </div>
