@@ -8652,6 +8652,88 @@ x:-moz-any-link {
     margin-left: 30px;
   }
 }
+@media (min-width: 40.0625em) {
+  .guide .part-navigation-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+
+  .gem-c-contents-list__title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .gem-c-contents-list__list-item {
+    padding-top: 10px;
+  }
+}
+.guide .part-navigation-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+aside {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+.gem-c-contents-list {
+  position: relative;
+  margin: 0 0 20px 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 20px 15px -10px #fff;
+}
+
+.gem-c-contents-list__title {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.1428571429;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gem-c-contents-list__list-item--dashed {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.gem-c-contents-list__list-item--dashed:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  overflow: hidden;
+}
+
 .govuk-button_unbranded {
   background-color: #000;
   border-radius: 50px;
