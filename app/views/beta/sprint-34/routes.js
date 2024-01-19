@@ -12,7 +12,7 @@ router.use(radioButtonRedirect)
 // Add your routes here - above the module.exports line
 
 router.post('/prototype-A/ssp-routing', function (req, res) {
-
+    console.log("message here")
     let currentSituation = req.session.data.currentSituation;
 
     const day = Number(req.session.data['employeeLeaveDateDayA'])
@@ -142,7 +142,7 @@ router.post('/prototype-A/est-q3-routing', function (req, res) {
     } else if (staQ2 == 'yesWorking' && estQ3 == 'notAsked') {
         res.redirect('com-g9');
     } else if (staQ2 == 'noOffWork' && estQ3 == 'notAsked') {
-        res.redirect('est-g8');
+        res.redirect('com-g8');
     } else {
         res.redirect('est-g4');
     }   
@@ -160,7 +160,7 @@ router.post('/prototype-B/est-q3-routing', function (req, res) {
     } else if (staQ2 == 'yesWorking' && estQ3 == 'notAsked') {
         res.redirect('com-g9');
     } else if (staQ2 == 'noOffWork' && estQ3 == 'notAsked') {
-        res.redirect('est-g8');
+        res.redirect('com-g8');
     } else {
         res.redirect('est-g4');
     }   

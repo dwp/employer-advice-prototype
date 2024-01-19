@@ -94,7 +94,7 @@ router.post('/prototype-A/est-q3-routing', function (req, res) {
     } else if (staQ2 == 'yesWorking' && estQ3 == 'notAsked') {
         res.redirect('com-g9');
     } else if (staQ2 == 'noOffWork' && estQ3 == 'notAsked') {
-        res.redirect('est-g8');
+        res.redirect('com-g8');
     } else {
         res.redirect('est-g4');
     }   

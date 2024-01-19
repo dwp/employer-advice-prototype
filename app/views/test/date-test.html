@@ -1,5 +1,5 @@
 
-{% extends "layout_unbranded.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
 When did your employee go off work sick?
@@ -11,10 +11,7 @@ When did your employee go off work sick?
     <div class="govuk-grid-column-two-thirds">
       <form action="date-test-answer" method="POST">
 
-      {{ govukBackLink({
-        text: "Back",
-        href: "start-now"
-      }) }}
+
 
       <br><br>
 

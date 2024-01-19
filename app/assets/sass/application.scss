@@ -1,312 +1,44 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
 .govuk-header__logo {
-  display: none;
-}
+    display: none;
+  }
+  
+  .govuk-heading-xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-s, .govuk-table, .govuk-table__caption--m, .govuk-link, p, a, .govuk-body, .govuk-body-m, .govuk-footer__link, .govuk-footer, .govuk-header__service-name, .govuk-list, .app-task-list__items, .govuk-caption-m, .govuk-button, .govuk-fieldset__heading, .govuk-back-link, .govuk-radios__label, .govuk-hint, .govuk-label, .govuk-body-l, .govuk-details {
+      font-family: Helvetica, Arial, sans-serif;
+  }
 
-$govuk-font-family: Helvetica, Arial, sans-serif;
 
-// global styles for <a> and <p> tags
-$govuk-global-styles: true;
-$govuk-new-link-styles: true;
-
-// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
-$govuk-assets-path: '/govuk/assets/';
-
-// Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import ".tmp/sass/extensions";
-
-// Patterns that aren't in Frontend
-@import "patterns/contents-list";
-@import "patterns/mainstream-guide";
-@import "patterns/pagination";
-@import "patterns/related-items";
-@import "patterns/task-list";
-
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-.gem-c-pagination {
-  display: block;
-  margin: 50px 0;
-}
-.gem-c-pagination__list {
-  margin: 0;
-  padding: 0;
-}
-.gem-c-pagination__item:first-child {
-  margin-bottom: 20px;
-}
-.gem-c-pagination__item {
-  font-family: "GDS Transport",arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  list-style: none;
-}
-.gem-c-pagination__link {
-  display: block;
-  text-decoration: none;
-  padding-bottom: 20px;
-}
-.gem-c-pagination__link-title {
-  display: block;
-  border-top: 1px solid #b1b4b6;
-  padding-top: 15px;
-}
-.gem-c-pagination__link-icon {
-  font-family: "GDS Transport",arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.25;
-  display: inline-block;
-  margin-bottom: 1px;
-  height: 0.482em;
-  width: 0.63em;
-  fill: #505a5f;
-}
-.gem-c-pagination__link-text {
-  font-family: "GDS Transport",arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-left: 10px;
-}
-.gem-c-pagination__link-divider {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  border: 0 !important;
-  white-space: nowrap !important;
-}
-.gem-c-pagination__link-label {
-  display: inline-block;
-  margin-top: 0.1em;
-  margin-left: 25px;
-  text-decoration: underline;
-  text-decoration-thickness: max(1px, 0.0625rem);
-  text-underline-offset: 0.1em;
-}
-@media (min-width: 40.0625em) {
-.gem-c-pagination__item {
-  font-size: 19px;
-  line-height: 1.3157894737;
-}
-.gem-c-pagination__link-icon {
-  font-size: 24px;
-  line-height: 1.25;
-}
-.gem-c-pagination__link-text {
-  font-size: 19px;
-  line-height: 1.3157894737;
-}
-.gem-c-pagination__link-label {
-  margin-left: 30px;
-}
-
-}
-
-@media (min-width: 40.0625em) {
-.guide .part-navigation-container {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 15px;
-}
-.gem-c-contents-list__title {
-  font-size: 16px;
-  line-height: 1.5;
-}
-.gem-c-contents-list__list, .gem-c-contents-list__nested-list {
-  font-size: 16px;
-  line-height: 1.25;
-}
-.gem-c-contents-list__list-item {
-  padding-top: 10px;
-}
-}
-
-.guide .part-navigation-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
+  .dwp-language-toggle {
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+  }
+  
+  .dwp-language-toggle__list {
+    margin-top: 1em;
+    text-align: right;
+  }
+  
+  .dwp-language-toggle__list-item {
+    display: inline-block;
+  }
+  
+  .dwp-language-toggle__list-item:first-child:after {
+    content: "";
+    display: inline-block;
+    border-right: 1px solid #0b0c0c;
+    position: relative;
+    top: .1875em;
+    height: 1em;
+  }
+  .govuk-phase-banner {
+    padding-top: 0px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #b1b4b6;
-}
-
-aside {
-    display: block;
-}
-
-nav {
-  display: block;
-}
-
-.gem-c-contents-list {
-  position: relative;
-  margin: 0 0 20px 0;
-  z-index: 1;
-  background: #fff;
-  box-shadow: 0 20px 15px -10px #fff;
-}
-
-.gem-c-contents-list__title {
-    color: #0b0c0c;
-    font-family: "GDS Transport",arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 0;
-}
-.gem-c-contents-list__list, .gem-c-contents-list__nested-list {
-  color: #0b0c0c;
-  font-family: "GDS Transport",arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.1428571429;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.gem-c-contents-list__list-item--dashed {
-  position: relative;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-.gem-c-contents-list__list-item--dashed:before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  width: 20px;
-  overflow: hidden;
-}
-
-//Changed from govuk-button to govuk-button-unbranded when team switched from unbranded to gov uk branded prototype. Due to same names green 'start now' buttons were being overridden. 
-.govuk-button_unbranded {
-    background-color: #000;
-    border-radius: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-   }
-   .govuk-button:hover {
-    background-color: #444;
-   }
-
-  .checklistCard {
-    background-color: #FFFFFF;
-    width: auto;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 20px;
-    margin-bottom: 25px;
+    margin-top: -30px;
   }
 
-   //Checklist page box components
-
-   .checklistCheckbox {
-    background-color: #FFFFFF;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgb(0, 0, 0);
-    float: right;
-   }
-
-   .checklistCardSpacing {
-     margin-top: 60px;
-     margin-bottom: 60px;
-   }
-
-  .govuk-grid-row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .govuk-grid-column-one-third {
-    padding: 0;
-  }
-  .govuk-grid-column-one-third p, .govuk-grid-column-one-third li {
-    font-size: 1rem;
-  }
-
-  @media only screen and (max-width: 698px)  {
-    .unbrandedFooter {
-      // position: fixed;
-      padding-top: 0.5%;
-      padding-bottom: 3%;
-      height: 50px;
-      // left: 0;
-      // bottom: 0;
-      width: 100%;
-      background-color: #F0EFEF;
-      color: white;
-      clear: both;
-     }
-
-     .unbrandedJourneyName {
-      margin-top: 1%;
-      margin-left: 3%;
-     }
-  
-     .unbrandedClearData {
-      // margin-left: 16%;
-      margin-top: 1%;
-      display: block;
-     }
-  }
-
-  @media only screen and (min-width: 699px) and (max-width: 799px)  {
-    .unbrandedFooter {
-      // position: fixed;
-      padding-top: 1px;
-      padding-bottom: 1px;
-      height: 40px;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #F0EFEF;
-      color: white;
-      clear: both;
-     }
-
-     .unbrandedJourneyName {
-      margin-top: 1%;
-      margin-left: 3%;
-     }
-  
-     .unbrandedClearData {
-      margin-left: 20%;
-     }
-  }
-
-  @media only screen and (min-width: 799px)  {
-    .unbrandedFooter {
-      position: fixed;
-      // padding-top: 5%;
-      height: 40px;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #F0EFEF;
-      color: white;
-      clear: both;
-      text-align: center;
-     }
-
-     .unbrandedJourneyName {
-      margin: auto;
-      padding-top: 0.5%;
-     }
-  
-     .unbrandedClearData {
-      margin-left: 20%;
-     }
-  }

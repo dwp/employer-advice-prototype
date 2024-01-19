@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
 Summary of what you should do {{ data['pageTitleAddOn'] }}
@@ -76,7 +76,7 @@ Summary of what you should do {{ data['pageTitleAddOn'] }}
         {% if data['estQ6'] == 'yes' %}
         <!-- Start of EST-G3 summary content -->
 
-        <h1 class="govuk-heading-l">You must Statutory Sick Pay if your employee is eligible</h1>
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay if your employee is eligible</h1>
 
         <p class="govuk-body">Because your employee has been off work for 8 days or more, you must pay Statutory Sick Pay (SSP) if your employee is eligible.</p>
 
@@ -91,7 +91,7 @@ Summary of what you should do {{ data['pageTitleAddOn'] }}
         {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
         <!-- Start of EST-G2 summary content -->
 
-        <h1 class="govuk-heading-l">You must Statutory Sick Pay if your employee is eligible</h1>
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay if your employee is eligible</h1>
 
         <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
           This means your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
