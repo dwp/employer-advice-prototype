@@ -78,6 +78,44 @@ router.post('/mvp-journey/ssp-routing', function (req, res) {
     }   
 });
 
+router.post('/mvp-journey/what-to-say-routing', function (req, res) {
+
+    let wantHelpOnWhatToSayA = req.session.data.wantHelpOnWhatToSayA;
+
+    if (wantHelpOnWhatToSayA == 'Yes'){
+        res.redirect('com-g1');
+    } else {
+        res.redirect('est-q3');
+    }   
+});
+
+router.post('/mvp-journey/told-about-condition-routing', function (req, res) {
+
+    let toldAboutCondition = req.session.data.toldAboutCondition;
+
+    if (toldAboutCondition == 'yesToldMe'){
+        res.redirect('est-g4');
+    } else if (toldAboutCondition == 'noNotToldMe') {
+        res.redirect('est-g5');
+    } else {
+        res.redirect('com-g8');
+    }   
+});
+
+router.post('/mvp-journey/talked-about-changes-routing', function (req, res) {
+
+    let talkedAboutChanges = req.session.data.talkedAboutChanges;
+    let currentSituation = req.session.data.currentSituation;
+
+    if (talkedAboutChanges == 'No'){
+        res.redirect('com-g2');
+    } else if (currentSituation == 'ongoingCondition' && talkedAboutChanges == 'Yes')  {
+        res.redirect('sum-2');
+    } else {
+        res.redirect('ret-g7');
+    }   
+});
+
 /* 
  End of example
 */
