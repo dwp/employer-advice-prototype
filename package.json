@@ -6,9 +6,9 @@
   },
   "dependencies": {
     "@ministryofjustice/frontend": "4.0.2",
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.18",
     "express": "4.21.2",
-    "govuk-frontend": "5.11.1",
+    "govuk-frontend": "5.11.2",
     "govuk-prototype-kit": "13.18.0",
     "radio-button-redirect": "1.2.0"
   }
