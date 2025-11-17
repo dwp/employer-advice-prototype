@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@ministryofjustice/frontend": "4.0.2",
-    "dayjs": "1.11.18",
+    "dayjs": "1.11.19",
     "express": "4.21.2",
     "govuk-frontend": "5.13.0",
     "govuk-prototype-kit": "13.18.1",
