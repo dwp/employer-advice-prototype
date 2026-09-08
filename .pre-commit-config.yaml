@@ -34,7 +34,7 @@ repos:
           - --no-progress
           - --no-summary
         additional_dependencies:
-          - "@cspell/dict-en-gb@5.0.29"
+          - "@cspell/dict-en-gb@5.0.5"
         stages:
           - pre-commit
           - commit-msg
@@ -71,15 +71,15 @@ repos:
       - id: markdownlint-cli2
         additional_dependencies:
           - markdownlint-rule-titlecase@0.1.0
-          - markdownlint-cli2-formatter-codequality@0.0.7
+          - markdownlint-cli2-formatter-codequality@0.0.5
 
   - repo: https://github.com/rbubley/mirrors-prettier
     rev: v3.5.3
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.8.4
-          - prettier-plugin-sh@0.18.1
+          - prettier@3.5.3
+          - prettier-plugin-sh@0.17.4
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.31.2
@@ -87,8 +87,8 @@ repos:
       - id: check-gitlab-ci
       - id: check-renovate
 
-  - repo: https://gitlab.com/dwp/secure-development/dwp-cli
-    rev: v3.29.2
+  - repo: https://dwp.gitlab-dedicated.com/dwp/secure-development/dwp-cli
+    rev: v3.15.3
     hooks:
       - id: check-catalog-info
       - id: check-pre-commit-config
