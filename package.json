@@ -9,7 +9,7 @@
     "dayjs": "1.11.23",
     "express": "4.22.3",
     "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "13.20.4",
+    "govuk-prototype-kit": "13.20.5",
     "radio-button-redirect": "1.2.0"
   }
 }
